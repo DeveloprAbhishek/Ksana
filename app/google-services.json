@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "302279715098",
+    "project_id": "ksana-528e8",
+    "storage_bucket": "ksana-528e8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:302279715098:android:3dab859fd0d2884bf864a3",
+        "android_client_info": {
+          "package_name": "com.masai.ksana"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "302279715098-9a60lcv2qoap0fq593pvcqbj8t5864dv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.masai.ksana",
+            "certificate_hash": "7179bba4e9a6d8a41a1fe5b39ba212fe40ffc584"
+          }
+        },
+        {
+          "client_id": "302279715098-2d0ce7bmj6o10jvo13uvsa4bcgag501p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbOzPlcjtWTEIDl8z-dWwRHLOmGkzbegI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "302279715098-2d0ce7bmj6o10jvo13uvsa4bcgag501p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
