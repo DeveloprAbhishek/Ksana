@@ -10,7 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ksana">
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.activity.DetailedProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

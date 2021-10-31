@@ -1,11 +1,12 @@
-package com.masai.ksana
+package com.masai.ksana.ui.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.masai.ksana.R
 
-class MainActivity : AppCompatActivity() {
+class DetailedProductActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_detailed_product)
     }
 }
