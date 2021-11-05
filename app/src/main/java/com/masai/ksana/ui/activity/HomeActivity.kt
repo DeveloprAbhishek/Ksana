@@ -3,6 +3,9 @@ package com.masai.ksana.ui.activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.shape.CornerFamily
+import com.google.android.material.shape.MaterialShapeDrawable
 import com.masai.ksana.R
 import com.masai.ksana.ui.fragment.CartFragment
 import com.masai.ksana.ui.fragment.HomeFragment
@@ -15,6 +18,7 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
         setCurrentFragment(HomeFragment())
+
         /*if (intent != null) {
             val bundle = Bundle()
             bundle.putString("key", intent.getStringExtra("intent"))
