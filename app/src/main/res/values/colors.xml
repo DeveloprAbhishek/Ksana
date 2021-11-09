@@ -14,14 +14,12 @@
     <color name="primary_white">#F4F4F4</color>
     <color name="primary_black">#232020</color>
 
-
     <!--    Black-->
     <color name="s_gray_100">#B0AEAE</color>
     <color name="s_gray_200">#939090</color>
     <color name="s_gray_300">#757171</color>
     <color name="s_gray_400">#575353</color>
     <color name="s_gray_500">#3A3535</color>
-
 
     <!--    white-->
     <color name="p_white_500">#F4F4F4</color>
