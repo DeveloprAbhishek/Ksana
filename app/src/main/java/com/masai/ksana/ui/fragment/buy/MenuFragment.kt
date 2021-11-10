@@ -1,4 +1,4 @@
-package com.masai.ksana.ui.fragment
+package com.masai.ksana.ui.fragment.buy
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,14 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import com.masai.ksana.R
 
-class SellProfileFragment : Fragment() {
+class MenuFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_sell_profile, container, false)
+        return inflater.inflate(R.layout.fragment_menu, container, false)
     }
 
 }

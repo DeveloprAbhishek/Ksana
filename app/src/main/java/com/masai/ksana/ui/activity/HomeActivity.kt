@@ -3,14 +3,11 @@ package com.masai.ksana.ui.activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.shape.CornerFamily
-import com.google.android.material.shape.MaterialShapeDrawable
 import com.masai.ksana.R
-import com.masai.ksana.ui.fragment.CartFragment
-import com.masai.ksana.ui.fragment.HomeFragment
-import com.masai.ksana.ui.fragment.MenuFragment
-import com.masai.ksana.ui.fragment.ProfileFragment
+import com.masai.ksana.ui.fragment.buy.CartFragment
+import com.masai.ksana.ui.fragment.buy.HomeFragment
+import com.masai.ksana.ui.fragment.buy.MenuFragment
+import com.masai.ksana.ui.fragment.buy.ProfileFragment
 import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : AppCompatActivity() {

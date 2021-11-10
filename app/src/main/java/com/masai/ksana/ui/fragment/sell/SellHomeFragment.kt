@@ -1,4 +1,4 @@
-package com.masai.ksana.ui.fragment
+package com.masai.ksana.ui.fragment.sell
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

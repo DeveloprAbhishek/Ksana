@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.masai.ksana.R
-import com.masai.ksana.ui.fragment.*
+import com.masai.ksana.ui.fragment.sell.SellCartFragment
+import com.masai.ksana.ui.fragment.sell.SellHomeFragment
+import com.masai.ksana.ui.fragment.sell.SellMenuFragment
+import com.masai.ksana.ui.fragment.sell.SellProfileFragment
 import kotlinx.android.synthetic.main.activity_home.*
 
 class SellActivity : AppCompatActivity() {
