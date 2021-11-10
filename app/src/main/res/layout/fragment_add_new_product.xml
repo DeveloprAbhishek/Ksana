@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragment.sell.SellHomeFragment">
+    android:background="@color/p_white_700"
+    tools:context=".ui.fragment.sell.AddNewProductFragment">
 
     <ImageView
         android:id="@+id/ivBack"
@@ -12,17 +13,17 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="50dp"
-        android:src="@drawable/cart_back"
+        android:src="@drawable/add_new_product_fragment_back"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/ivNotification"
+        android:id="@+id/ivCart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:layout_marginRight="20dp"
-        android:src="@drawable/cart_notification"
+        android:src="@drawable/add_new_product_fragment_cart"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -31,35 +32,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:src="@drawable/cart_home"
+        android:src="@drawable/add_new_product_fragment_home"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+    <ImageView
+        android:id="@+id/btnNew"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginRight="20dp"
-        android:fontFamily="@font/nunito_bold"
-        android:text="Add\nProduct to Inventory"
-        android:textColor="@color/primary_black"
-        android:textColorHint="@color/white"
-        android:textSize="38sp"
+        android:layout_marginTop="150dp"
+        android:src="@drawable/add_new_product_fragment_upload_button"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/add_person_fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="100dp"
-        app:fabSize="normal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:srcCompat="@drawable/floating_add_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
