@@ -3,4 +3,6 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="terms_conditions"><![CDATA[by registering, you confirm that you agree to our Terms & Conditions]]></string>
+    <string name="ksana">Ksana</string>
+    <string name="i_want_to">I Want to</string>
 </resources>
