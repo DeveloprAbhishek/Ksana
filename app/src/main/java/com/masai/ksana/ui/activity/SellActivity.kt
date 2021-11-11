@@ -4,17 +4,17 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.masai.ksana.R
-import com.masai.ksana.ui.fragment.buy.CartFragment
-import com.masai.ksana.ui.fragment.buy.HomeFragment
-import com.masai.ksana.ui.fragment.buy.MenuFragment
-import com.masai.ksana.ui.fragment.buy.ProfileFragment
+import com.masai.ksana.ui.fragment.sell.SellCartFragment
+import com.masai.ksana.ui.fragment.sell.SellHomeFragment
+import com.masai.ksana.ui.fragment.sell.SellMenuFragment
+import com.masai.ksana.ui.fragment.sell.SellProfileFragment
 import kotlinx.android.synthetic.main.activity_home.*
 
-class HomeActivity : AppCompatActivity() {
+class SellActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
-        setCurrentFragment(HomeFragment())
+        setContentView(R.layout.activity_sell)
+        setCurrentFragment(SellHomeFragment())
 
         /*if (intent != null) {
             val bundle = Bundle()
@@ -35,10 +35,10 @@ class HomeActivity : AppCompatActivity() {
         */
         bottomNavBar.setOnNavigationItemSelectedListener {
             when (it.itemId) {
-                R.id.page_1 -> setCurrentFragment(HomeFragment())
-                R.id.page_2 -> setCurrentFragment(CartFragment())
-                R.id.page_3 -> setCurrentFragment(ProfileFragment())
-                R.id.page_4 -> setCurrentFragment(MenuFragment())
+                R.id.page_1 -> setCurrentFragment(SellHomeFragment())
+                R.id.page_2 -> setCurrentFragment(SellCartFragment())
+                R.id.page_3 -> setCurrentFragment(SellProfileFragment())
+                R.id.page_4 -> setCurrentFragment(SellMenuFragment())
             }
             true
         }
