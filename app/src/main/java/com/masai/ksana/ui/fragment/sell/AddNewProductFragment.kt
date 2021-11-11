@@ -6,11 +6,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.masai.ksana.R
 import kotlinx.android.synthetic.main.fragment_add_new_product.*
 
 class AddNewProductFragment : Fragment() {
+
+    private lateinit var database: FirebaseDatabase
+    private lateinit var reference: DatabaseReference
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -54,18 +58,20 @@ class AddNewProductFragment : Fragment() {
             return
         }
 
-        val reference = FirebaseDatabase.getInstance().getReference("products")
+        database = FirebaseDatabase.getInstance()
+        reference = database.getReference("products")
         val productId = reference.push().key
+
 
         val product =
             productId?.let {
                 SellProductList(
-                    it,
-                    productName,
-                    materialGrade,
-                    unitLength,
                     diameter,
-                    quantity
+                    it,
+                    materialGrade,
+                    productName,
+                    quantity,
+                    unitLength
                 )
             }
         if (productId != null) {
@@ -76,7 +82,6 @@ class AddNewProductFragment : Fragment() {
     }
 
 }
-
 
 
 /*
