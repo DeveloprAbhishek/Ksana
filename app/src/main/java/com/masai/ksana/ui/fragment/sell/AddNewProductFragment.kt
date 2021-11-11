@@ -39,22 +39,22 @@ class AddNewProductFragment : Fragment() {
         }
         val materialGrade = etEnterMaterialGrade.text.toString().trim()
         if (materialGrade.isEmpty()) {
-            etEnterMaterialGrade.error = "Please Enter Product Name"
+            etEnterMaterialGrade.error = "Please Enter Material Grade"
             return
         }
         val unitLength = etEnterUnitLength.text.toString().trim()
         if (unitLength.isEmpty()) {
-            etEnterUnitLength.error = "Please Enter Product Name"
+            etEnterUnitLength.error = "Please Enter Unit Length"
             return
         }
         val diameter = etEnterDiameter.text.toString().trim()
         if (diameter.isEmpty()) {
-            etEnterDiameter.error = "Please Enter Product Name"
+            etEnterDiameter.error = "Please Enter Diameter"
             return
         }
         val quantity = etEnterQuantity.text.toString().trim()
         if (quantity.isEmpty()) {
-            etEnterQuantity.error = "Please Enter Product Name"
+            etEnterQuantity.error = "Please Enter Quantity"
             return
         }
 
