@@ -7,7 +7,7 @@
     tools:context=".ui.fragment.sell.SellHomeFragment">
 
     <ImageView
-        android:id="@+id/ivSearch"
+        android:id="@+id/ivSellSearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/ivNotification"
+        android:id="@+id/ivSellNotification"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
