@@ -14,14 +14,15 @@
     <color name="primary_white">#F4F4F4</color>
     <color name="primary_black">#232020</color>
 
-
     <!--    Black-->
     <color name="s_gray_100">#B0AEAE</color>
     <color name="s_gray_200">#939090</color>
     <color name="s_gray_300">#757171</color>
     <color name="s_gray_400">#575353</color>
     <color name="s_gray_500">#3A3535</color>
-
+    <color name="s_gray_600">#434343</color>
+    <color name="s_gray_700">#8C8C8C</color>
+    <color name="s_gray_800">#232020</color>
 
     <!--    white-->
     <color name="p_white_500">#F4F4F4</color>
@@ -42,7 +43,5 @@
     <color name="a_orange_900">#662E08</color>
 
     <color name="orange_E77">#E77676</color>
-
-
 
 </resources>

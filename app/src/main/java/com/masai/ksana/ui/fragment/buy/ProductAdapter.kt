@@ -15,11 +15,12 @@ import java.io.File
 class ProductAdapter(var list: ArrayList<SellProductList>) :
     RecyclerView.Adapter<ProductAdapter.ViewHolder>() {
 
-
     private lateinit var storageReference: StorageReference
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var productName = itemView.tvProductName
+        var productName = itemView.tvProductTitle
+        var productPrice = itemView.tvProductPrice
+
         var productImage = itemView.ivProductImage
     }
 
@@ -31,7 +32,11 @@ class ProductAdapter(var list: ArrayList<SellProductList>) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.productName.text = list[position].productName
+        var title: String =
+            "" + list[position].productName + " " + list[position].productType + " " + list[position].materialGrade
+        holder.productName.text = title
+        var price: String = "₹" + list[position].productPrice
+        holder.productPrice.text = price
         storageReference =
             FirebaseStorage.getInstance().reference.child("Products/" + list[position].id + ".jpg")
         val localFile = File.createTempFile("tempImage", "jpg")

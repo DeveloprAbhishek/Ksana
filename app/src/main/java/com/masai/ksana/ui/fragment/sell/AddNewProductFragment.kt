@@ -16,6 +16,8 @@ import kotlinx.android.synthetic.main.fragment_add_new_product.*
 import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Environment
+import android.widget.RadioButton
+import android.widget.RadioGroup
 import androidx.core.content.FileProvider
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
@@ -29,6 +31,9 @@ class AddNewProductFragment : Fragment() {
     private lateinit var storageReference: StorageReference
     private lateinit var imageUri: Uri
     private lateinit var photoFile: File
+
+    var radioGroup: RadioGroup? = null
+    lateinit var radioButton: RadioButton
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -113,6 +118,19 @@ class AddNewProductFragment : Fragment() {
             etEnterProductName.error = "Please Enter Product Name"
             return
         }
+        val productPrice = etEnterProductPrice.text.toString().trim()
+        if (productPrice.isEmpty()) {
+            etEnterProductPrice.error = "Please Enter Product Price"
+            return
+        }
+
+        //product type radio button
+        var productType: String = ""
+        radioGroup = view?.findViewById(R.id.groupRadio)
+        val intSelectButton: Int = radioGroup!!.checkedRadioButtonId
+        radioButton = view?.findViewById(intSelectButton)!!
+        productType = radioButton.text.toString()
+
         val materialGrade = etEnterMaterialGrade.text.toString().trim()
         if (materialGrade.isEmpty()) {
             etEnterMaterialGrade.error = "Please Enter Material Grade"
@@ -146,6 +164,8 @@ class AddNewProductFragment : Fragment() {
                     it,
                     materialGrade,
                     productName,
+                    productPrice,
+                    productType,
                     quantity,
                     unitLength
                 )

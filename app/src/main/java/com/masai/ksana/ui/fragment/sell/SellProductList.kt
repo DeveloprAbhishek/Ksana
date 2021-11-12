@@ -5,6 +5,8 @@ data class SellProductList(
     var id: String? = "",
     var materialGrade: String? = "",
     var productName: String? = "",
+    var productPrice: String? = "",
+    var productType: String? = "",
     var quantity: String? = "",
     var unitLength: String? = ""
 )

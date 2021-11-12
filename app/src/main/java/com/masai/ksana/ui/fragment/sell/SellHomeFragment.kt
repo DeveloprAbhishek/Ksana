@@ -1,6 +1,5 @@
 package com.masai.ksana.ui.fragment.sell
 
-import android.R.attr
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,8 +9,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.FragmentTransaction
 import com.masai.ksana.R
 import kotlinx.android.synthetic.main.fragment_sell_home.*
-import android.R.attr.data
-
 
 class SellHomeFragment : Fragment() {
 

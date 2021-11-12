@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.GridLayoutManager
 import com.google.firebase.database.*
 import com.masai.ksana.R
 import com.masai.ksana.ui.fragment.sell.SellProductList
@@ -33,7 +34,6 @@ class HomeFragment : Fragment() {
     }
 
     private fun getProducts() {
-
         reference.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 val list = ArrayList<SellProductList>()
@@ -44,17 +44,13 @@ class HomeFragment : Fragment() {
                 if (list.size > 0) {
                     var adapter = ProductAdapter(list)
                     recyclerView.adapter = adapter
+                    recyclerView.layoutManager = GridLayoutManager(context, 2)
                 }
             }
-
             override fun onCancelled(error: DatabaseError) {
                 Log.e("cancel", error.toString())
             }
-
         })
-
-
     }
-
 
 }

@@ -43,127 +43,121 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.25"/>
+        app:layout_constraintGuide_percent="0.25" />
 
     <EditText
         android:id="@+id/etFirstName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/edit_text_background"
         android:hint="First Name"
         android:padding="12dp"
-        android:layout_marginRight="5dp"
         android:textColorHint="@color/p_white_800"
-        android:background="@drawable/edit_text_background"
         app:layout_constraintEnd_toStartOf="@id/etLastName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/guidelineHorizontal1"/>
+        app:layout_constraintTop_toBottomOf="@id/guidelineHorizontal1" />
 
     <EditText
         android:id="@+id/etLastName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/edit_text_background"
         android:hint="Last Name"
         android:padding="12dp"
-        android:layout_marginLeft="5dp"
         android:textColorHint="@color/p_white_800"
-        android:background="@drawable/edit_text_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/etFirstName"
-        app:layout_constraintTop_toBottomOf="@id/guidelineHorizontal1"/>
+        app:layout_constraintTop_toBottomOf="@id/guidelineHorizontal1" />
 
     <EditText
         android:id="@+id/etMobile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/edit_text_background"
         android:hint="Mobile Number"
         android:padding="12dp"
-        android:layout_marginTop="40dp"
         android:textColorHint="@color/p_white_800"
-        android:background="@drawable/edit_text_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etFirstName"/>
+        app:layout_constraintTop_toBottomOf="@id/etFirstName" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnSendCode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="5dp"
+        android:backgroundTint="@color/accent_orange"
         android:text="send code"
-        android:textSize="16sp"
         android:textAllCaps="false"
         android:textColor="@color/primary_black"
+        android:textSize="16sp"
         app:cornerRadius="10dp"
-        android:backgroundTint="@color/accent_orange"
-        app:layout_constraintEnd_toEndOf="@id/etMobile"
-        app:layout_constraintTop_toTopOf="@id/etMobile"
         app:layout_constraintBottom_toBottomOf="@id/etMobile"
-        />
+        app:layout_constraintEnd_toEndOf="@id/etMobile"
+        app:layout_constraintTop_toTopOf="@id/etMobile" />
 
     <EditText
         android:id="@+id/etVerificationCode"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/edit_text_background"
         android:hint="Enter Verification Code"
         android:padding="12dp"
-        android:layout_marginTop="40dp"
         android:textColorHint="@color/p_white_800"
-        android:background="@drawable/edit_text_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etMobile"/>
+        app:layout_constraintTop_toBottomOf="@id/etMobile" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnVerify"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="5dp"
+        android:backgroundTint="@color/accent_orange"
         android:text="verify"
-        android:textSize="16sp"
         android:textAllCaps="false"
         android:textColor="@color/primary_black"
+        android:textSize="16sp"
         app:cornerRadius="10dp"
-        android:backgroundTint="@color/accent_orange"
-        app:layout_constraintEnd_toEndOf="@id/etVerificationCode"
-        app:layout_constraintTop_toTopOf="@id/etVerificationCode"
         app:layout_constraintBottom_toBottomOf="@id/etVerificationCode"
-        />
-
+        app:layout_constraintEnd_toEndOf="@id/etVerificationCode"
+        app:layout_constraintTop_toTopOf="@id/etVerificationCode" />
 
     <EditText
         android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/edit_text_background"
         android:hint="Set Password"
         android:padding="12dp"
-        android:layout_marginTop="40dp"
         android:textColorHint="@color/p_white_800"
-        android:background="@drawable/edit_text_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etVerificationCode"/>
-
+        app:layout_constraintTop_toBottomOf="@id/etVerificationCode" />
 
     <ImageView
         android:id="@+id/btnProceed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_correct"
         android:layout_marginTop="50dp"
+        android:src="@drawable/ic_correct"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etPassword"/>
-
+        app:layout_constraintTop_toBottomOf="@id/etPassword" />
 
     <TextView
         android:id="@+id/tvTermConditions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="12dp"
         android:text="@string/terms_conditions"
         android:textColor="@color/p_white_700"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
-
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

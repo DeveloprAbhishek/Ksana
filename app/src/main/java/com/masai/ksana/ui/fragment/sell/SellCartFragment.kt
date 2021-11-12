@@ -6,12 +6,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.isVisible
 import androidx.fragment.app.FragmentTransaction
 import com.masai.ksana.R
-import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.fragment_sell_cart.*
-import kotlinx.android.synthetic.main.fragment_sell_home.*
 
 class SellCartFragment : Fragment() {
 
