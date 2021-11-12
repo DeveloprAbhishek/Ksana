@@ -10,7 +10,6 @@ import com.google.firebase.database.*
 import com.masai.ksana.R
 import com.masai.ksana.ui.fragment.sell.SellProductList
 import kotlinx.android.synthetic.main.fragment_home.*
-import java.sql.DatabaseMetaData
 
 class HomeFragment : Fragment() {
 

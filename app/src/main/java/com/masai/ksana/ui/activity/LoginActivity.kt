@@ -10,6 +10,7 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+        //dummy
         btnSell.setOnClickListener {
             val i = Intent(this@LoginActivity, SellActivity::class.java)
             startActivity(i)

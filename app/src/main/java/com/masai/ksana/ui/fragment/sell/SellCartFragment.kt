@@ -1,5 +1,6 @@
 package com.masai.ksana.ui.fragment.sell
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -33,7 +34,18 @@ class SellCartFragment : Fragment() {
             )
             ft.addToBackStack(null)
             ft.commit()
+/*
+            val intent = Intent(getActivity(), AddNewProductFragmentActivity::class.java)
+            getActivity()?.startActivity(intent)
+*/
         }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        for (fragment in childFragmentManager.fragments) {
+            fragment.onActivityResult(requestCode, resultCode, data)
+        }
+        super.onActivityResult(requestCode, resultCode, data)
     }
 
 }
