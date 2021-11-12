@@ -6,4 +6,39 @@
     android:layout_height="match_parent"
     tools:context=".ui.activity.LoginActivity">
 
+
+    <Button
+        android:id="@+id/btnBuy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_bg_sell"
+        android:text="Buy"
+        android:textAllCaps="false"
+        android:textColor="@color/a_orange_900"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:theme="@style/Theme.AppCompat.DayNight"
+        app:layout_constraintBottom_toTopOf="@id/btnSell"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/btnSell"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:background="@drawable/button_bg_sell"
+        android:text="Sell"
+        android:textAllCaps="false"
+        android:textColor="@color/a_orange_900"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:theme="@style/Theme.AppCompat.DayNight"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnBuy" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
