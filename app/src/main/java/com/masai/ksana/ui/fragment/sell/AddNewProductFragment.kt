@@ -114,7 +114,7 @@ class AddNewProductFragment : Fragment() {
 
             //imageUri = Uri.parse(photoFile.absolutePath)
 
-            btnUpload.setImageBitmap(takenImage)
+            ivUploadImage.setImageBitmap(takenImage)
         } else
             super.onActivityResult(requestCode, resultCode, data)
 
@@ -181,7 +181,7 @@ class AddNewProductFragment : Fragment() {
 
     private fun uploadProductImage(id: String) {
         //imageUri = Uri.parse(btnUpload.)
-        storageReference = FirebaseStorage.getInstance().getReference("Products/" + id)
+        storageReference = FirebaseStorage.getInstance().getReference("Products/" + id+".jpg")
         storageReference.putFile(imageUri).addOnSuccessListener {
             Toast.makeText(context, "Image Added Successfully", Toast.LENGTH_SHORT).show()
         }.addOnFailureListener {
