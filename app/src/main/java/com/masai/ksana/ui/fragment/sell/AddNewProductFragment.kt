@@ -23,6 +23,7 @@ import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import java.io.File
 import androidx.core.net.toUri
+import com.masai.ksana.data.SellProductList
 
 class AddNewProductFragment : Fragment() {
 

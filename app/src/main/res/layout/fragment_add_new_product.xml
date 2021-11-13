@@ -86,7 +86,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/radBtnEnterProductName"
+                android:id="@+id/cvEnterProductName"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginLeft="20dp"
@@ -116,9 +116,9 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/radBtnEnterProductName">
+                app:layout_constraintTop_toBottomOf="@id/cvEnterProductName">
 
                 <RadioButton
                     android:id="@+id/btnTMTBar"
@@ -147,7 +147,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginLeft="215dp"
-                android:layout_marginTop="125dp"
+                android:layout_marginTop="115dp"
                 android:layout_marginRight="20dp"
                 android:background="@color/s_gray_500"
                 app:cardCornerRadius="12dp"
@@ -265,7 +265,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="310dp"
+                android:layout_marginTop="320dp"
                 android:fontFamily="@font/nunito_regular"
                 android:text="Enter Quantity to Sold"
                 android:textColor="@color/p_white_900"
@@ -276,11 +276,12 @@
 
             <EditText
                 android:id="@+id/etEnterQuantity"
-                android:layout_width="57dp"
-                android:layout_height="45dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-10dp"
                 android:layout_marginRight="20dp"
                 android:fontFamily="@font/nunito_regular"
-                android:hint="Min 50"
+                android:hint="Min 50 Ton"
                 android:textColor="@color/s_gray_800"
                 android:textColorHint="@color/p_white_800"
                 android:textSize="14sp"
@@ -292,6 +293,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
                 android:fontFamily="@font/nunito_regular"
                 android:text="Enter Product Price to Sold"
                 android:textColor="@color/p_white_900"
@@ -304,6 +306,7 @@
                 android:id="@+id/etEnterProductPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="-10dp"
                 android:layout_marginRight="20dp"
                 android:fontFamily="@font/nunito_regular"
                 android:hint="Min 10000"
@@ -317,7 +320,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="150dp"
-                android:layout_marginBottom="110dp"
+                android:layout_marginBottom="50dp"
                 android:src="@drawable/add_new_product_fragment_proceed_button"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"

@@ -1,4 +1,4 @@
-package com.masai.ksana.ui.fragment.sell
+package com.masai.ksana.ui.adapter
 
 import android.graphics.BitmapFactory
 import android.view.LayoutInflater
@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import com.masai.ksana.R
+import com.masai.ksana.data.SellProductList
 import kotlinx.android.synthetic.main.product_item_layout_sell_cart.view.*
 import kotlinx.android.synthetic.main.product_item_view.view.ivProductImage
 import java.io.File

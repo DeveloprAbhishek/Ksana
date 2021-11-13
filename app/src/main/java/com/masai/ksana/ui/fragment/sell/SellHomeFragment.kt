@@ -8,12 +8,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.FragmentTransaction
-import androidx.navigation.Navigation
 import androidx.recyclerview.widget.GridLayoutManager
 import com.google.firebase.database.*
 import com.masai.ksana.R
-import com.masai.ksana.ui.fragment.buy.ProductAdapter
-import com.masai.ksana.ui.fragment.buy.ProductClicked
+import com.masai.ksana.data.SellProductList
+import com.masai.ksana.ui.adapter.ProductAdapter
+import com.masai.ksana.ui.inter_face.ProductClicked
 import kotlinx.android.synthetic.main.fragment_sell_home.*
 
 class SellHomeFragment : Fragment(), ProductClicked {
@@ -98,9 +98,6 @@ class SellHomeFragment : Fragment(), ProductClicked {
         bundle.putString("quantity", sellProductList.quantity)
         bundle.putString("unitLength", sellProductList.unitLength)
         parentFragmentManager.setFragmentResult("product", bundle)
-
-        /*Navigation.findNavController(requireView())
-            .navigate(R.id.action_homeFragment_to_productDetailsFragment)*/
     }
 
 }

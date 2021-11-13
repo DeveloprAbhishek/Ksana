@@ -1,4 +1,4 @@
-package com.masai.ksana.ui.fragment.sell
+package com.masai.ksana.data
 
 data class SellProductList(
     var diameter: String? = "",

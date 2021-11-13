@@ -1,18 +1,19 @@
 package com.masai.ksana.ui.fragment.buy
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.FragmentTransaction
-import androidx.fragment.app.add
 import androidx.recyclerview.widget.GridLayoutManager
 import com.google.firebase.database.*
 import com.masai.ksana.R
-import com.masai.ksana.ui.fragment.sell.SellCartFragment
-import com.masai.ksana.ui.fragment.sell.SellProductList
+import com.masai.ksana.ui.activity.DetailedProductActivity
+import com.masai.ksana.data.SellProductList
+import com.masai.ksana.ui.adapter.ProductAdapter
+import com.masai.ksana.ui.inter_face.ProductClicked
 import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment(), ProductClicked {
@@ -77,15 +78,11 @@ class HomeFragment : Fragment(), ProductClicked {
         bundle.putString("productType", sellProductList.productType)
         bundle.putString("quantity", sellProductList.quantity)
         bundle.putString("unitLength", sellProductList.unitLength)
-        parentFragmentManager.setFragmentResult("product", bundle)
-        val ft: FragmentTransaction = parentFragmentManager.beginTransaction()
-        ft.replace(
-            R.id.framelayout_container,
-            ProductDetailFragment(),
-            "Home Fragment"
-        )
-        ft.addToBackStack(null)
-        ft.commit()
+        activity?.let {
+            val intent = Intent(it, DetailedProductActivity::class.java)
+            intent.putExtra("product", bundle)
+            it.startActivity(intent)
+        }
     }
 
 }

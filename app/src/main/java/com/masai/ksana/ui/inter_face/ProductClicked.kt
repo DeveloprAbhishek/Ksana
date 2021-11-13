@@ -1,6 +1,6 @@
-package com.masai.ksana.ui.fragment.buy
+package com.masai.ksana.ui.inter_face
 
-import com.masai.ksana.ui.fragment.sell.SellProductList
+import com.masai.ksana.data.SellProductList
 
 interface ProductClicked {
 

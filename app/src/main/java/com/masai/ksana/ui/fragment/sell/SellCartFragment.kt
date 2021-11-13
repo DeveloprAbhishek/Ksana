@@ -7,10 +7,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.database.*
 import com.masai.ksana.R
+import com.masai.ksana.data.SellProductList
+import com.masai.ksana.ui.activity.AddNewProductActivity
+import com.masai.ksana.ui.adapter.SellCartProductAdapter
 import kotlinx.android.synthetic.main.fragment_sell_cart.*
 
 class SellCartFragment : Fragment() {
@@ -28,19 +30,11 @@ class SellCartFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         btnAddPersonFab.setOnClickListener {
-            val ft: FragmentTransaction = parentFragmentManager.beginTransaction()
-            ft.replace(
-                R.id.framelayout_container,
-                AddNewProductFragment(),
-                "Add New Product Fragment"
-            )
-            ft.addToBackStack(null)
-            ft.commit()
-/*
-            val intent = Intent(getActivity(), AddNewProductFragmentActivity::class.java)
-            getActivity()?.startActivity(intent)
-*/
+            val intent = Intent(context, AddNewProductActivity::class.java)
+            startActivity(intent)
+
         }
 
         //getting products from firebase database

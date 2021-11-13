@@ -14,6 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Ksana">
+        <activity
+            android:name=".ui.activity.AddNewProductActivity"
+            android:exported="false" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -28,14 +31,12 @@
         <activity
             android:name=".ui.activity.DetailedProductActivity"
             android:exported="true" />
-
         <activity
             android:name=".ui.activity.SellActivity"
             android:exported="true" />
         <activity
             android:name=".ui.activity.HomeActivity"
             android:exported="false" />
-
         <activity
             android:name=".ui.activity.LoginActivity"
             android:exported="true">
