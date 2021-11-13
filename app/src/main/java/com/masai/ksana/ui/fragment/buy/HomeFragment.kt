@@ -36,17 +36,28 @@ class HomeFragment : Fragment() {
     private fun getProducts() {
         reference.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                val list = ArrayList<SellProductList>()
+                val list1 = ArrayList<SellProductList>()
+                val list2 = ArrayList<SellProductList>()
                 for (data in snapshot.children) {
-                    var model = data.getValue(SellProductList::class.java)
-                    list.add(model as SellProductList)
+                    var materialGrade = data.getValue(SellProductList::class.java)?.materialGrade
+                    if (materialGrade == "Fe-500") {
+                        var model1 = data.getValue(SellProductList::class.java)
+                        list1.add(model1 as SellProductList)
+                    } else if (materialGrade == "Fe-550") {
+                        var model2 = data.getValue(SellProductList::class.java)
+                        list2.add(model2 as SellProductList)
+                    }
                 }
-                if (list.size > 0) {
-                    var adapter = ProductAdapter(list)
-                    recyclerView.adapter = adapter
-                    recyclerView.layoutManager = GridLayoutManager(context, 2)
+                if (list1.size > 0 || list2.size > 0) {
+                    var adapter = ProductAdapter(list1)
+                    Fe500TMTBarRecyclerView.adapter = adapter
+                    Fe500TMTBarRecyclerView.layoutManager = GridLayoutManager(context, 2)
+                    var adapter2 = ProductAdapter(list2)
+                    Fe550TMTBarRecyclerView.adapter = adapter2
+                    Fe550TMTBarRecyclerView.layoutManager = GridLayoutManager(context, 2)
                 }
             }
+
             override fun onCancelled(error: DatabaseError) {
                 Log.e("cancel", error.toString())
             }

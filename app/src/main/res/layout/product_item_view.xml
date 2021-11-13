@@ -49,7 +49,6 @@
                 android:fontFamily="@font/nunito_bold"
                 android:text="Product Name"
                 android:textColor="@color/s_gray_600"
-                android:textColorHint="@color/white"
                 android:textSize="13sp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -64,7 +63,6 @@
                 android:fontFamily="@font/nunito_bold"
                 android:text="63,350"
                 android:textColor="@color/a_orange_700"
-                android:textColorHint="@color/white"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="@id/viewWhite"
                 app:layout_constraintLeft_toLeftOf="parent"
@@ -78,7 +76,6 @@
                 android:fontFamily="@font/nunito_bold"
                 android:text="per Ton"
                 android:textColor="@color/s_gray_700"
-                android:textColorHint="@color/white"
                 android:textSize="8sp"
                 app:layout_constraintBottom_toBottomOf="@id/tvProductPrice"
                 app:layout_constraintLeft_toRightOf="@id/tvProductPrice" />
