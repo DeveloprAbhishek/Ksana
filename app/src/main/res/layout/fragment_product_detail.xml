@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.buy.ProductDetailFragment">
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/img_product_detail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivProductDetailBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivProductDetailCart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/ic_buy_product_detail_cart"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivProductDetailHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/ic_buy_product_detail_home"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/midGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.34" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="250dp"
+        android:layout_marginBottom="-30dp"
+        app:cardCornerRadius="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/midGuideline">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/p_white_500"
+            android:paddingHorizontal="13dp"
+            android:paddingTop="25dp">
+
+            <TextView
+                android:id="@+id/tvCategoryName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_bold"
+                android:text="TMT Bar"
+                android:textColor="@color/p_white_900"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvProductName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_bold"
+                android:text="Radha Thermex Fe-550"
+                android:textColor="@color/primary_black"
+                android:textSize="28sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvCategoryName" />
+
+            <TextView
+                android:id="@+id/tvUnitLengthLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="Unit Length"
+                android:textColor="@color/p_white_900"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvProductName" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnUnit6m"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="6m"
+                android:textSize="14sp"
+                android:textAllCaps="false"
+                android:textColor="@color/primary_black"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/p_white_900"
+                app:cornerRadius="10dp"
+                android:backgroundTint="@color/p_white_500"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvUnitLengthLabel"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnUnit9m"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="9m"
+                android:textSize="14sp"
+                android:textAllCaps="false"
+                android:textColor="@color/primary_black"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/p_white_900"
+                app:cornerRadius="10dp"
+                android:backgroundTint="@color/p_white_500"
+                app:layout_constraintStart_toEndOf="@id/btnUnit6m"
+                app:layout_constraintTop_toBottomOf="@id/tvUnitLengthLabel"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnUnit12m"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:fontFamily="@font/nunito_bold"
+                android:text="12m"
+                android:textSize="14sp"
+                android:textAllCaps="false"
+                android:textColor="@color/primary_black"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/p_white_900"
+                app:cornerRadius="10dp"
+                android:backgroundTint="@color/p_white_500"
+                app:layout_constraintStart_toEndOf="@id/btnUnit9m"
+                app:layout_constraintTop_toBottomOf="@id/tvUnitLengthLabel"
+                />
+
+            <TextView
+                android:id="@+id/tvDiameterLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="Diameter"
+                android:textColor="@color/p_white_900"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/midGuidelineVertical"
+                app:layout_constraintTop_toBottomOf="@id/tvProductName" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDiameter6mm"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="@string/_6mmm"
+                android:lineHeight="10dp"
+                android:textSize="14sp"
+                android:textAllCaps="false"
+                android:textColor="@color/primary_black"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/p_white_900"
+                app:cornerRadius="10dp"
+                android:backgroundTint="@color/p_white_500"
+                app:layout_constraintStart_toStartOf="@id/midGuidelineVertical"
+                app:layout_constraintTop_toBottomOf="@id/tvDiameterLabel"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDiameter8mm"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="@string/_8mm"
+                android:lineHeight="10dp"
+                android:textSize="14sp"
+                android:textAllCaps="false"
+                android:textColor="@color/primary_black"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/p_white_900"
+                app:cornerRadius="10dp"
+                android:backgroundTint="@color/p_white_500"
+                app:layout_constraintStart_toEndOf="@id/btnDiameter6mm"
+                app:layout_constraintTop_toBottomOf="@id/tvDiameterLabel"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDiameter10mm"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="@string/_10mm"
+                android:lineHeight="10dp"
+                android:textSize="14sp"
+                android:textAllCaps="false"
+                android:textColor="@color/primary_black"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/p_white_900"
+                app:cornerRadius="10dp"
+                android:backgroundTint="@color/p_white_500"
+                app:layout_constraintStart_toEndOf="@id/btnDiameter8mm"
+                app:layout_constraintTop_toBottomOf="@id/tvDiameterLabel"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDiameter12mm"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="@string/_12mm"
+                android:lineHeight="10dp"
+                android:textSize="14sp"
+                android:textAllCaps="false"
+                android:textColor="@color/primary_black"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/p_white_900"
+                app:cornerRadius="10dp"
+                android:backgroundTint="@color/p_white_500"
+                app:layout_constraintStart_toEndOf="@id/btnDiameter10mm"
+                app:layout_constraintTop_toBottomOf="@id/tvDiameterLabel"
+                />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDiameter16mm"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="@string/_16mm"
+                android:lineHeight="10dp"
+                android:textSize="14sp"
+                android:textAllCaps="false"
+                android:textColor="@color/primary_black"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/p_white_900"
+                app:cornerRadius="10dp"
+                android:backgroundTint="@color/p_white_500"
+                app:layout_constraintStart_toStartOf="@id/midGuidelineVertical"
+                app:layout_constraintTop_toBottomOf="@id/btnDiameter6mm"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDiameter20mm"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="@string/_20mm"
+                android:lineHeight="10dp"
+                android:textSize="14sp"
+                android:textAllCaps="false"
+                android:textColor="@color/primary_black"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/p_white_900"
+                app:cornerRadius="10dp"
+                android:backgroundTint="@color/p_white_500"
+                app:layout_constraintStart_toEndOf="@id/btnDiameter6mm"
+                app:layout_constraintTop_toBottomOf="@id/btnDiameter6mm"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDiameter25mm"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="@string/_25mm"
+                android:lineHeight="10dp"
+                android:textSize="14sp"
+                android:textAllCaps="false"
+                android:textColor="@color/primary_black"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/p_white_900"
+                app:cornerRadius="10dp"
+                android:backgroundTint="@color/p_white_500"
+                app:layout_constraintStart_toEndOf="@id/btnDiameter8mm"
+                app:layout_constraintTop_toBottomOf="@id/btnDiameter6mm"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDiameter28mm"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="@string/_28mm"
+                android:lineHeight="10dp"
+                android:textSize="14sp"
+                android:textAllCaps="false"
+                android:textColor="@color/primary_black"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/p_white_900"
+                app:cornerRadius="10dp"
+                android:backgroundTint="@color/p_white_500"
+                app:layout_constraintStart_toEndOf="@id/btnDiameter10mm"
+                app:layout_constraintTop_toBottomOf="@id/btnDiameter6mm"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDiameter30mm"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="@string/_30mm"
+                android:lineHeight="10dp"
+                android:textSize="14sp"
+                android:textAllCaps="false"
+                android:textColor="@color/primary_black"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/p_white_900"
+                app:cornerRadius="10dp"
+                android:backgroundTint="@color/p_white_500"
+                app:layout_constraintStart_toStartOf="@id/midGuidelineVertical"
+                app:layout_constraintTop_toBottomOf="@id/btnDiameter16mm"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDiameter32mm"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="@string/_32mm"
+                android:lineHeight="10dp"
+                android:textSize="14sp"
+                android:textAllCaps="false"
+                android:textColor="@color/primary_black"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/p_white_900"
+                app:cornerRadius="10dp"
+                android:backgroundTint="@color/p_white_500"
+                app:layout_constraintStart_toEndOf="@id/btnDiameter6mm"
+                app:layout_constraintTop_toBottomOf="@id/btnDiameter16mm"
+                />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/midGuidelineVertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineAt55"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="292dp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/s_gray_100"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/guidelineAt55"/>
+
+            <TextView
+                android:id="@+id/tvRequiredQuaLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_bold"
+                android:layout_marginTop="10dp"
+                android:text="Enter Required Quantity"
+                android:textColor="@color/primary_black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/guidelineAt55" />
+
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAddToCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="3dp"
+                android:fontFamily="@font/nunito_bold"
+                android:drawableLeft="@drawable/ic_buy_product_detail_add_orange"
+                android:drawableRight="@drawable/ic_buy_product_detail_cart_orange"
+                android:text="  "
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                android:textColor="@color/primary_black"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/accent_orange"
+                app:cornerRadius="18dp"
+                android:backgroundTint="@color/p_white_500"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvRequiredQuaLabel"
+                />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineAt75"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.79"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/s_gray_100"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/guidelineAt75"/>
+
+            <View
+                android:id="@+id/vBottomBg"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_product_detail_bottom"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/guidelineAt75"
+                />
+
+            <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="63,490"
+                android:textColor="@color/primary_white"
+                android:textSize="36sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/vBottomBg" />
+
+            <ImageView
+                android:id="@+id/ivHeart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/ic_buy_product_detail_heart"
+                app:layout_constraintTop_toTopOf="@id/vBottomBg"
+                app:layout_constraintEnd_toStartOf="@id/ivProductDetailBuy"
+                app:layout_constraintBottom_toBottomOf="@id/vBottomBg"
+                />
+
+            <ImageView
+                android:id="@+id/ivProductDetailBuy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_btn_buy_product_detail"
+                app:layout_constraintTop_toTopOf="@id/vBottomBg"
+                app:layout_constraintEnd_toEndOf="@id/vBottomBg"
+                app:layout_constraintBottom_toBottomOf="@id/vBottomBg"
+                />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

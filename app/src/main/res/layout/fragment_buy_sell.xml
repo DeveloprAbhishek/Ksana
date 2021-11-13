@@ -31,6 +31,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/text_view_bg_round"
+        android:fontFamily="@font/nunito_bold"
         android:paddingHorizontal="20dp"
         android:paddingVertical="10dp"
         android:text="@string/ksana"
@@ -52,6 +53,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="18dp"
+        android:fontFamily="@font/nunito_bold"
         android:text="@string/i_want_to"
         android:textSize="28sp"
         android:textColor="@color/p_white_600"
@@ -63,6 +65,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="18dp"
+        android:fontFamily="@font/nunito_bold"
         android:text="@string/i_want_to"
         android:textSize="28sp"
         android:textColor="@color/p_white_600"
@@ -92,6 +95,7 @@
         android:layout_width="wrap_content"
         android:layout_height="55dp"
         android:text="Sell"
+        android:fontFamily="@font/nunito_bold"
         android:textStyle="bold"
         android:textSize="25sp"
         android:textColor="@color/a_orange_900"
@@ -110,5 +114,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/guidelineAt80"/>
+
+    <Button
+        android:theme="@style/Theme.AppCompat.DayNight"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:text="Buy"
+        android:fontFamily="@font/nunito_bold"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:textColor="@color/a_orange_900"
+        android:textAllCaps="false"
+        android:background="@drawable/button_bg_buy"
+        app:layout_constraintStart_toEndOf="@id/ivPersonSellBuy"
+        app:layout_constraintTop_toTopOf="@id/ivPersonSellBuy"
+        app:layout_constraintBottom_toBottomOf="@+id/ivPersonSellBuy"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,4 +5,14 @@
     <string name="terms_conditions"><![CDATA[by registering, you confirm that you agree to our Terms & Conditions]]></string>
     <string name="ksana">Ksana</string>
     <string name="i_want_to">I Want to</string>
+    <string name="_6mmm">6\nmm</string>
+    <string name="_8mm">8\nmm</string>
+    <string name="_10mm">10\nmm</string>
+    <string name="_12mm">12\nmm</string>
+    <string name="_16mm">16\nmm</string>
+    <string name="_20mm">20\nmm</string>
+    <string name="_25mm">25\nmm</string>
+    <string name="_28mm">28\nmm</string>
+    <string name="_32mm">32\nmm</string>
+    <string name="_30mm">30\nmm</string>
 </resources>
