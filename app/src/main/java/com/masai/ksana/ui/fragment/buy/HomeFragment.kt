@@ -9,7 +9,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
 import com.google.firebase.database.*
 import com.masai.ksana.R
-import com.masai.ksana.ui.buy_adapters.ProductAdapter
 import com.masai.ksana.ui.fragment.sell.SellProductList
 import kotlinx.android.synthetic.main.fragment_home.*
 

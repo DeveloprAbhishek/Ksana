@@ -10,6 +10,7 @@
         <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/drawable/add_new_product_fragment_open_camera_button.xml" value="0.21481481481481482" />
         <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/drawable/add_new_product_fragment_proceed_button.xml" value="0.21481481481481482" />
         <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/drawable/add_new_product_fragment_upload_button.xml" value="0.21481481481481482" />
+        <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/drawable/bg_product_detail_bottom.xml" value="0.24114583333333334" />
         <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/drawable/button_bg_buy.xml" value="0.21481481481481482" />
         <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/drawable/button_bg_sell.xml" value="0.21481481481481482" />
         <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/drawable/cart_back.xml" value="0.24114583333333334" />
@@ -20,12 +21,32 @@
         <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/drawable/edit_text_background.xml" value="0.21481481481481482" />
         <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/drawable/floating_add_button.xml" value="0.24114583333333334" />
         <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/drawable/home_default.xml" value="0.20092592592592592" />
+        <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/drawable/home_scroll_rectangle.xml" value="0.24114583333333334" />
+        <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/drawable/home_scroll_triangle.xml" value="0.24114583333333334" />
+        <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/drawable/home_top_image_1.xml" value="0.13" />
+        <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/drawable/ic_add_address_home.xml" value="0.24114583333333334" />
+        <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/drawable/ic_add_detail_warehouse.xml" value="0.24114583333333334" />
+        <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/drawable/ic_axis_logo.xml" value="0.24114583333333334" />
         <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/drawable/ic_back.xml" value="0.21481481481481482" />
+        <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/drawable/ic_btn_buy_product_detail.xml" value="0.24114583333333334" />
+        <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/drawable/ic_business.xml" value="0.24114583333333334" />
+        <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/drawable/ic_buy_product_detail_add_orange.xml" value="0.24114583333333334" />
+        <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/drawable/ic_buy_product_detail_cart.xml" value="0.24114583333333334" />
+        <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/drawable/ic_buy_product_detail_cart_orange.xml" value="0.24114583333333334" />
+        <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/drawable/ic_buy_product_detail_forward.xml" value="0.24114583333333334" />
+        <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/drawable/ic_buy_product_detail_heart.xml" value="0.24114583333333334" />
+        <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/drawable/ic_buy_product_detail_home.xml" value="0.24114583333333334" />
         <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/drawable/ic_close.xml" value="0.21481481481481482" />
         <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/drawable/ic_correct.xml" value="0.21481481481481482" />
+        <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/drawable/ic_idbi_logo.xml" value="0.24114583333333334" />
         <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/drawable/ic_launcher_background.xml" value="0.20092592592592592" />
         <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/drawable/ic_left.xml" value="0.21481481481481482" />
+        <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/drawable/ic_payment_success.xml" value="0.24114583333333334" />
         <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/drawable/ic_person_sell_buy.xml" value="0.21481481481481482" />
+        <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/drawable/ic_pnb_logo.xml" value="0.24114583333333334" />
+        <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/drawable/ic_sbi_logo.xml" value="0.24114583333333334" />
+        <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/drawable/ic_united_logo.xml" value="0.24114583333333334" />
+        <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/drawable/ic_visa_logo.xml" value="0.24114583333333334" />
         <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/drawable/menu_default.xml" value="0.20092592592592592" />
         <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/drawable/new_button_default.xml" value="0.18611111111111112" />
         <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/drawable/notification_default.xml" value="0.21481481481481482" />
@@ -44,7 +65,7 @@
         <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/layout/fragment_buy_sell.xml" value="0.21920289855072464" />
         <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/layout/fragment_cart.xml" value="0.1272644927536232" />
         <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/layout/fragment_edit_delivery_address.xml" value="0.1094224924012158" />
-        <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/layout/fragment_home.xml" value="0.22" />
+        <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/layout/fragment_login.xml" value="0.12092391304347826" />
         <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/layout/fragment_menu.xml" value="0.1272644927536232" />
         <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/layout/fragment_payment_successful.xml" value="0.14673913043478262" />

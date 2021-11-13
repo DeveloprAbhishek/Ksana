@@ -119,6 +119,56 @@
                     android:src="@drawable/home_scroll_triangle" />
             </RelativeLayout>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:fontFamily="@font/nunito_regular"
+                android:text="All Categories"
+                android:textColor="@color/s_gray_800"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/home_top_image_5" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/home_top_image_6" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:drawableRight="@drawable/sell_home_right"
+                android:fontFamily="@font/nunito_regular"
+                android:text="TMT Bar Product Inventory"
+                android:textColor="@color/s_gray_800"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:drawableRight="@drawable/sell_home_right"
+                android:fontFamily="@font/nunito_regular"
+                android:text="Flat Bar Product Inventory"
+                android:textColor="@color/s_gray_800"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
         </LinearLayout>
     </ScrollView>
 
