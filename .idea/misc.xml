@@ -39,19 +39,21 @@
         <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/layout/activity_detailed_product.xml" value="0.1272644927536232" />
         <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/layout/activity_home.xml" value="0.1272644927536232" />
         <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/layout/activity_login.xml" value="0.1272644927536232" />
-        <entry key="..\:/Programs/Android/ConstructWeekProject/Ksana/app/src/main/res/drawable/bg_product_detail_bottom.xml" value="0.290625" />
-        <entry key="..\:/Programs/Android/ConstructWeekProject/Ksana/app/src/main/res/drawable/button_bg_buy.xml" value="0.290625" />
-        <entry key="..\:/Programs/Android/ConstructWeekProject/Ksana/app/src/main/res/drawable/button_bg_sell.xml" value="0.290625" />
-        <entry key="..\:/Programs/Android/ConstructWeekProject/Ksana/app/src/main/res/drawable/button_bg_sell_buy.xml" value="0.290625" />
         <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/layout/activity_sell.xml" value="0.10778985507246377" />
         <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/layout/fragment_add_new_product.xml" value="0.18" />
         <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/layout/fragment_buy_sell.xml" value="0.21920289855072464" />
         <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/layout/fragment_cart.xml" value="0.1272644927536232" />
+        <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/layout/fragment_edit_delivery_address.xml" value="0.1094224924012158" />
         <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/layout/fragment_home.xml" value="0.22" />
         <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/layout/fragment_login.xml" value="0.12092391304347826" />
         <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/layout/fragment_menu.xml" value="0.1272644927536232" />
+        <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/layout/fragment_payment_successful.xml" value="0.14673913043478262" />
+        <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/layout/fragment_payment_verification.xml" value="0.14673913043478262" />
+        <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/layout/fragment_product_detail.xml" value="0.14673913043478262" />
         <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/layout/fragment_profile.xml" value="0.1272644927536232" />
         <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/layout/fragment_register.xml" value="0.14673913043478262" />
+        <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/layout/fragment_select_address.xml" value="0.1094224924012158" />
+        <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/layout/fragment_select_payment.xml" value="0.1094224924012158" />
         <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/layout/fragment_sell_cart.xml" value="0.18" />
         <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/layout/fragment_sell_home.xml" value="0.16" />
         <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/layout/fragment_sell_menu.xml" value="0.1094224924012158" />
@@ -65,40 +67,12 @@
         <entry key="..\:/Construct Week Project/4.Ksana/Ksana/app/src/main/res/xml/fileprovider.xml" value="0.21920289855072464" />
         <entry key="..\:/Programs/Android/ConstructWeekProject/Ksana/app/src/main/res/drawable/edit_text.xml" value="0.28615384615384615" />
         <entry key="..\:/Programs/Android/ConstructWeekProject/Ksana/app/src/main/res/drawable/ic_back.xml" value="0.28615384615384615" />
-        <entry key="..\:/Programs/Android/ConstructWeekProject/Ksana/app/src/main/res/drawable/ic_payment_success.xml" value="0.290625" />
-        <entry key="..\:/Programs/Android/ConstructWeekProject/Ksana/app/src/main/res/drawable/ic_united_logo.xml" value="0.290625" />
         <entry key="..\:/Programs/Android/ConstructWeekProject/Ksana/app/src/main/res/drawable/sdf.xml" value="0.2234375" />
         <entry key="..\:/Programs/Android/ConstructWeekProject/Ksana/app/src/main/res/font/font.xml" value="0.2375" />
-        <entry key="..\:/Programs/Android/ConstructWeekProject/Ksana/app/src/main/res/layout-v28/fragment_product_detail.xml" value="0.27447916666666666" />
-        <entry key="..\:/Programs/Android/ConstructWeekProject/Ksana/app/src/main/res/layout/activity_detailed_product.xml" value="0.27447916666666666" />
-        <entry key="..\:/Programs/Android/ConstructWeekProject/Ksana/app/src/main/res/layout/activity_home.xml" value="0.27447916666666666" />
-        <entry key="..\:/Programs/Android/ConstructWeekProject/Ksana/app/src/main/res/layout/activity_login.xml" value="0.27447916666666666" />
-        <entry key="..\:/Programs/Android/ConstructWeekProject/Ksana/app/src/main/res/layout/activity_sell.xml" value="0.27447916666666666" />
-        <entry key="..\:/Programs/Android/ConstructWeekProject/Ksana/app/src/main/res/layout/fragment_add_delivery_address.xml" value="0.264" />
-        <entry key="..\:/Programs/Android/ConstructWeekProject/Ksana/app/src/main/res/layout/fragment_add_new_product.xml" value="0.27447916666666666" />
-        <entry key="..\:/Programs/Android/ConstructWeekProject/Ksana/app/src/main/res/layout/fragment_buy_sell.xml" value="0.6" />
-        <entry key="..\:/Programs/Android/ConstructWeekProject/Ksana/app/src/main/res/layout/fragment_cart.xml" value="0.27447916666666666" />
-        <entry key="..\:/Programs/Android/ConstructWeekProject/Ksana/app/src/main/res/layout/fragment_edit_delivery_address.xml" value="0.27447916666666666" />
-        <entry key="..\:/Programs/Android/ConstructWeekProject/Ksana/app/src/main/res/layout/fragment_home.xml" value="0.27447916666666666" />
         <entry key="..\:/Programs/Android/ConstructWeekProject/Ksana/app/src/main/res/layout/fragment_buy_sell.xml" value="0.2328125" />
         <entry key="..\:/Programs/Android/ConstructWeekProject/Ksana/app/src/main/res/layout/fragment_login.xml" value="0.2328125" />
-        <entry key="..\:/Programs/Android/ConstructWeekProject/Ksana/app/src/main/res/layout/fragment_menu.xml" value="0.27447916666666666" />
-        <entry key="..\:/Programs/Android/ConstructWeekProject/Ksana/app/src/main/res/layout/fragment_payment_successful.xml" value="0.264" />
-        <entry key="..\:/Programs/Android/ConstructWeekProject/Ksana/app/src/main/res/layout/fragment_payment_varification.xml" value="0.27447916666666666" />
-        <entry key="..\:/Programs/Android/ConstructWeekProject/Ksana/app/src/main/res/layout/fragment_payment_verification.xml" value="0.27447916666666666" />
-        <entry key="..\:/Programs/Android/ConstructWeekProject/Ksana/app/src/main/res/layout/fragment_product_detail.xml" value="0.264" />
-        <entry key="..\:/Programs/Android/ConstructWeekProject/Ksana/app/src/main/res/layout/fragment_profile.xml" value="0.27447916666666666" />
-        <entry key="..\:/Programs/Android/ConstructWeekProject/Ksana/app/src/main/res/layout/fragment_register.xml" value="0.2" />
-        <entry key="..\:/Programs/Android/ConstructWeekProject/Ksana/app/src/main/res/layout/fragment_select_address.xml" value="0.72" />
-        <entry key="..\:/Programs/Android/ConstructWeekProject/Ksana/app/src/main/res/layout/fragment_select_payment.xml" value="0.264" />
-        <entry key="..\:/Programs/Android/ConstructWeekProject/Ksana/app/src/main/res/layout/fragment_sell_cart.xml" value="0.27447916666666666" />
-        <entry key="..\:/Programs/Android/ConstructWeekProject/Ksana/app/src/main/res/layout/fragment_sell_home.xml" value="0.27447916666666666" />
-        <entry key="..\:/Programs/Android/ConstructWeekProject/Ksana/app/src/main/res/layout/fragment_sell_menu.xml" value="0.27447916666666666" />
-        <entry key="..\:/Programs/Android/ConstructWeekProject/Ksana/app/src/main/res/layout/fragment_sell_profile.xml" value="0.27447916666666666" />
-        <entry key="..\:/Programs/Android/ConstructWeekProject/Ksana/app/src/main/res/layout/fragment_welcome.xml" value="0.264" />
-        <entry key="..\:/Programs/Android/ConstructWeekProject/Ksana/app/src/main/res/layout/item_select_address.xml" value="0.536" />
-        <entry key="..\:/Programs/Android/ConstructWeekProject/Ksana/app/src/main/res/layout/item_selecte_address.xml" value="0.27447916666666666" />
-        <entry key="..\:/Programs/Android/ConstructWeekProject/Ksana/app/src/main/res/layout/product_item_view.xml" value="0.27447916666666666" />
+        <entry key="..\:/Programs/Android/ConstructWeekProject/Ksana/app/src/main/res/layout/fragment_register.xml" value="0.264" />
+        <entry key="..\:/Programs/Android/ConstructWeekProject/Ksana/app/src/main/res/layout/fragment_welcome.xml" value="0.2" />
       </map>
     </option>
   </component>

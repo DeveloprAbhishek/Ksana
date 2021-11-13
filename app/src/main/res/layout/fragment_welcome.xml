@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.20"/>
+        app:layout_constraintGuide_percent="0.20" />
 
     <TextView
         android:id="@+id/tvWelcomeLabel"
@@ -41,8 +41,8 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/nunito_bold"
         android:text="Ksana"
-        android:textSize="30sp"
         android:textColor="@color/accent_orange"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvWelcomeLabel" />
@@ -52,42 +52,43 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.75"/>
+        app:layout_constraintGuide_percent="0.75" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/accent_orange"
         android:fontFamily="@font/nunito_bold"
+        android:paddingHorizontal="45dp"
+        android:paddingVertical="15dp"
         android:text="Register"
-        android:textSize="26sp"
         android:textAllCaps="false"
         android:textColor="@color/primary_black"
-        android:paddingVertical="15dp"
-        android:paddingHorizontal="45dp"
+        android:textSize="26sp"
         app:cornerRadius="10dp"
-        android:backgroundTint="@color/accent_orange"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/guideline2"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline2" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/primary_black"
         android:fontFamily="@font/nunito_bold"
+        android:paddingHorizontal="18dp"
+        android:paddingVertical="10dp"
         android:text="Log in"
-        android:textSize="18sp"
         android:textAllCaps="false"
         android:textColor="@color/accent_orange"
-        android:paddingVertical="10dp"
-        android:paddingHorizontal="18dp"
+        android:textSize="18sp"
         app:cornerRadius="10dp"
-        app:strokeColor="@color/accent_orange"
-        app:strokeWidth="2dp"
-        android:backgroundTint="@color/primary_black"
-        android:layout_marginTop="10dp"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnRegister"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnRegister"
+        app:strokeColor="@color/accent_orange"
+        app:strokeWidth="2dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

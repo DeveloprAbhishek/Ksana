@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/primary_black"
@@ -9,7 +9,7 @@
     android:paddingVertical="30dp"
     tools:context=".ui.fragment.buy.SelectAddressFragment">
 
-      <ImageView
+    <ImageView
         android:id="@+id/btnBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -21,27 +21,26 @@
         android:id="@+id/btnAddAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_buy_product_detail_add_orange"
+        android:fontFamily="@font/nunito_bold"
         android:paddingHorizontal="9dp"
         android:paddingVertical="4dp"
-        android:fontFamily="@font/nunito_bold"
-        android:drawableLeft="@drawable/ic_buy_product_detail_add_orange"
         android:text=" ADD"
-        android:textSize="16sp"
         android:textAllCaps="false"
         android:textColor="@color/primary_white"
-        app:strokeWidth="1dp"
-        app:strokeColor="@color/accent_orange"
+        android:textSize="16sp"
         app:cornerRadius="18dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        />
+        app:strokeColor="@color/accent_orange"
+        app:strokeWidth="1dp" />
 
     <TextView
         android:id="@+id/tvRegisterLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/nunito_bold"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/nunito_bold"
         android:text="Select"
         android:textColor="@color/primary_white"
         android:textSize="32sp"
@@ -64,40 +63,38 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.25"/>
+        app:layout_constraintGuide_percent="0.25" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvSelectedAddress"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineHorizontalAt93"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/guidelineHorizontal1"
-        app:layout_constraintBottom_toBottomOf="@id/guidelineHorizontalAt93"/>
+        app:layout_constraintTop_toTopOf="@id/guidelineHorizontal1" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineHorizontalAt93"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.9"/>
+        app:layout_constraintGuide_percent="0.9" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnProceed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="49dp"
         android:layout_marginTop="20dp"
-        android:paddingVertical="11dp"
-        android:fontFamily="@font/nunito_bold"
-        android:text="Proceed"
-        android:textSize="16sp"
-        android:textAllCaps="false"
-        app:cornerRadius="12dp"
         android:backgroundTint="@color/accent_orange"
-        app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="@font/nunito_bold"
+        android:paddingHorizontal="49dp"
+        android:paddingVertical="11dp"
+        android:text="Proceed"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:cornerRadius="12dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/guidelineHorizontalAt93"
-        />
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guidelineHorizontalAt93" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

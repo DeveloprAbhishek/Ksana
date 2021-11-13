@@ -9,7 +9,6 @@
     android:paddingVertical="35dp"
     tools:context=".ui.fragment.BuySellFragment">
 
-
     <View
         android:id="@+id/straightLine"
         android:layout_width="5dp"
@@ -25,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.2"/>
+        app:layout_constraintGuide_percent="0.2" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -39,15 +38,14 @@
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/guidelineTop"
-        />
+        app:layout_constraintTop_toTopOf="@id/guidelineTop" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineBottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.7"/>
+        app:layout_constraintGuide_percent="0.7" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -55,11 +53,10 @@
         android:layout_marginEnd="18dp"
         android:fontFamily="@font/nunito_bold"
         android:text="@string/i_want_to"
-        android:textSize="28sp"
         android:textColor="@color/p_white_600"
-        app:layout_constraintTop_toTopOf="@id/guidelineBottom"
+        android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="@id/straightLine"
-        />
+        app:layout_constraintTop_toTopOf="@id/guidelineBottom" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -67,68 +64,64 @@
         android:layout_marginStart="18dp"
         android:fontFamily="@font/nunito_bold"
         android:text="@string/i_want_to"
-        android:textSize="28sp"
         android:textColor="@color/p_white_600"
-        app:layout_constraintTop_toTopOf="@id/guidelineBottom"
+        android:textSize="28sp"
         app:layout_constraintStart_toStartOf="@id/straightLine"
-        />
-
+        app:layout_constraintTop_toTopOf="@id/guidelineBottom" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineAt80"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.8"/>
+        app:layout_constraintGuide_percent="0.8" />
 
     <View
         android:layout_width="80dp"
         android:layout_height="55dp"
         android:background="@color/orange_E77"
-        app:layout_constraintTop_toTopOf="@id/ivPersonSellBuy"
-        app:layout_constraintStart_toStartOf="@id/ivPersonSellBuy"
+        app:layout_constraintBottom_toBottomOf="@+id/ivPersonSellBuy"
         app:layout_constraintEnd_toEndOf="@id/ivPersonSellBuy"
-        app:layout_constraintBottom_toBottomOf="@+id/ivPersonSellBuy"/>
+        app:layout_constraintStart_toStartOf="@id/ivPersonSellBuy"
+        app:layout_constraintTop_toTopOf="@id/ivPersonSellBuy" />
 
     <Button
-        android:theme="@style/Theme.AppCompat.DayNight"
         android:layout_width="wrap_content"
         android:layout_height="55dp"
-        android:text="Sell"
-        android:fontFamily="@font/nunito_bold"
-        android:textStyle="bold"
-        android:textSize="25sp"
-        android:textColor="@color/a_orange_900"
-        android:textAllCaps="false"
         android:background="@drawable/button_bg_sell"
-        app:layout_constraintEnd_toStartOf="@id/ivPersonSellBuy"
-        app:layout_constraintTop_toTopOf="@id/ivPersonSellBuy"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Sell"
+        android:textAllCaps="false"
+        android:textColor="@color/a_orange_900"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:theme="@style/Theme.AppCompat.DayNight"
         app:layout_constraintBottom_toBottomOf="@+id/ivPersonSellBuy"
-        />
+        app:layout_constraintEnd_toStartOf="@id/ivPersonSellBuy"
+        app:layout_constraintTop_toTopOf="@id/ivPersonSellBuy" />
 
     <ImageView
         android:id="@+id/ivPersonSellBuy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_person_sell_buy"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/guidelineAt80"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guidelineAt80" />
 
     <Button
-        android:theme="@style/Theme.AppCompat.DayNight"
         android:layout_width="wrap_content"
         android:layout_height="55dp"
-        android:text="Buy"
-        android:fontFamily="@font/nunito_bold"
-        android:textStyle="bold"
-        android:textSize="25sp"
-        android:textColor="@color/a_orange_900"
-        android:textAllCaps="false"
         android:background="@drawable/button_bg_buy"
-        app:layout_constraintStart_toEndOf="@id/ivPersonSellBuy"
-        app:layout_constraintTop_toTopOf="@id/ivPersonSellBuy"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Buy"
+        android:textAllCaps="false"
+        android:textColor="@color/a_orange_900"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:theme="@style/Theme.AppCompat.DayNight"
         app:layout_constraintBottom_toBottomOf="@+id/ivPersonSellBuy"
-        />
+        app:layout_constraintStart_toEndOf="@id/ivPersonSellBuy"
+        app:layout_constraintTop_toTopOf="@id/ivPersonSellBuy" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

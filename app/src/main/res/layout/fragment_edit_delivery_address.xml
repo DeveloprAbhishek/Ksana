@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/primary_black"
@@ -9,7 +9,7 @@
     android:paddingVertical="30dp"
     tools:context=".ui.fragment.buy.EditDeliveryAddressFragment">
 
-   <ImageView
+    <ImageView
         android:id="@+id/btnBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -23,14 +23,14 @@
         android:layout_height="wrap_content"
         android:src="@drawable/ic_correct"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvRegisterLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/nunito_bold"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/nunito_bold"
         android:text="Edit"
         android:textColor="@color/primary_white"
         android:textSize="32sp"
@@ -53,105 +53,105 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.25"/>
+        app:layout_constraintGuide_percent="0.25" />
 
     <EditText
         android:id="@+id/etFirstName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/edit_text_background"
         android:fontFamily="@font/nunito_bold"
         android:hint="First Name"
         android:padding="10dp"
-        android:layout_marginRight="5dp"
         android:textColorHint="@color/p_white_800"
-        android:background="@drawable/edit_text_background"
         app:layout_constraintEnd_toStartOf="@id/etLastName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/guidelineHorizontal1"/>
+        app:layout_constraintTop_toBottomOf="@id/guidelineHorizontal1" />
 
     <EditText
         android:id="@+id/etLastName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/edit_text_background"
         android:fontFamily="@font/nunito_bold"
         android:hint="Last Name"
         android:padding="10dp"
-        android:layout_marginLeft="5dp"
         android:textColorHint="@color/p_white_800"
-        android:background="@drawable/edit_text_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/etFirstName"
-        app:layout_constraintTop_toBottomOf="@id/guidelineHorizontal1"/>
+        app:layout_constraintTop_toBottomOf="@id/guidelineHorizontal1" />
 
     <EditText
         android:id="@+id/etMobile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/edit_text_background"
         android:fontFamily="@font/nunito_bold"
         android:hint="Mobile Number"
         android:padding="10dp"
-        android:layout_marginTop="40dp"
         android:textColorHint="@color/p_white_800"
-        android:background="@drawable/edit_text_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etFirstName"/>
+        app:layout_constraintTop_toBottomOf="@id/etFirstName" />
 
     <EditText
-            android:id="@+id/etFlatNo"
+        android:id="@+id/etFlatNo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/edit_text_background"
         android:fontFamily="@font/nunito_bold"
         android:hint="Flat No./ House No."
         android:padding="10dp"
-        android:layout_marginTop="40dp"
         android:textColorHint="@color/p_white_800"
-        android:background="@drawable/edit_text_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etMobile"/>
+        app:layout_constraintTop_toBottomOf="@id/etMobile" />
 
     <EditText
         android:id="@+id/etSociety"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Society/Street"
-        android:fontFamily="@font/nunito_bold"
-        android:padding="10dp"
         android:layout_marginTop="40dp"
-        android:textColorHint="@color/p_white_800"
         android:background="@drawable/edit_text_background"
+        android:fontFamily="@font/nunito_bold"
+        android:hint="Society/Street"
+        android:padding="10dp"
+        android:textColorHint="@color/p_white_800"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etFlatNo"/>
+        app:layout_constraintTop_toBottomOf="@id/etFlatNo" />
 
     <EditText
         android:id="@+id/etState"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="State"
-        android:fontFamily="@font/nunito_bold"
-        android:padding="10dp"
         android:layout_marginTop="40dp"
-        android:textColorHint="@color/p_white_800"
         android:background="@drawable/edit_text_background"
+        android:fontFamily="@font/nunito_bold"
+        android:hint="State"
+        android:padding="10dp"
+        android:textColorHint="@color/p_white_800"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etFlatNo"/>
+        app:layout_constraintTop_toBottomOf="@id/etFlatNo" />
 
     <EditText
         android:id="@+id/etPin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Pin"
-        android:fontFamily="@font/nunito_bold"
-        android:padding="10dp"
         android:layout_marginTop="40dp"
-        android:textColorHint="@color/p_white_800"
         android:background="@drawable/edit_text_background"
+        android:fontFamily="@font/nunito_bold"
+        android:hint="Pin"
+        android:padding="10dp"
+        android:textColorHint="@color/p_white_800"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etState"/>
+        app:layout_constraintTop_toBottomOf="@id/etState" />
 
     <TextView
         android:id="@+id/tvTypeOfLocation"
@@ -163,53 +163,48 @@
         android:textColor="@color/p_white_600"
         android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etPin"
-        />
+        app:layout_constraintTop_toBottomOf="@id/etPin" />
 
     <TextView
-       android:id="@+id/tvDeliveryHome"
+        android:id="@+id/tvDeliveryHome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:drawableTop="@drawable/ic_add_address_home"
         android:layout_marginTop="20dp"
+        android:drawableTop="@drawable/ic_add_address_home"
         android:fontFamily="@font/nunito_bold"
         android:text="Home"
         android:textColor="@color/p_white_600"
         android:textSize="18dp"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/tvDeliveryWarehouse"
-        app:layout_constraintTop_toBottomOf="@id/tvTypeOfLocation"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTypeOfLocation" />
 
     <TextView
         android:id="@+id/tvDeliveryWarehouse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:drawableTop="@drawable/ic_add_detail_warehouse"
         android:layout_marginTop="20dp"
+        android:drawableTop="@drawable/ic_add_detail_warehouse"
         android:fontFamily="@font/nunito_bold"
         android:text="Warehouse"
         android:textColor="@color/p_white_600"
         android:textSize="18dp"
-        app:layout_constraintStart_toEndOf="@id/tvDeliveryHome"
-        app:layout_constraintTop_toBottomOf="@id/tvTypeOfLocation"
         app:layout_constraintEnd_toStartOf="@id/tvDeliveryBusiness"
-        />
-
+        app:layout_constraintStart_toEndOf="@id/tvDeliveryHome"
+        app:layout_constraintTop_toBottomOf="@id/tvTypeOfLocation" />
 
     <TextView
         android:id="@+id/tvDeliveryBusiness"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:drawableTop="@drawable/ic_business"
         android:layout_marginTop="20dp"
+        android:drawableTop="@drawable/ic_business"
         android:fontFamily="@font/nunito_bold"
         android:text="Business"
         android:textColor="@color/p_white_600"
         android:textSize="18dp"
-        app:layout_constraintStart_toEndOf="@id/tvDeliveryWarehouse"
-        app:layout_constraintTop_toBottomOf="@id/tvTypeOfLocation"
         app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintStart_toEndOf="@id/tvDeliveryWarehouse"
+        app:layout_constraintTop_toBottomOf="@id/tvTypeOfLocation" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
