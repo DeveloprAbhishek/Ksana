@@ -8,13 +8,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.FragmentTransaction
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.GridLayoutManager
 import com.google.firebase.database.*
 import com.masai.ksana.R
 import com.masai.ksana.ui.fragment.buy.ProductAdapter
+import com.masai.ksana.ui.fragment.buy.ProductClicked
 import kotlinx.android.synthetic.main.fragment_sell_home.*
 
-class SellHomeFragment : Fragment() {
+class SellHomeFragment : Fragment(), ProductClicked {
 
     private lateinit var database: FirebaseDatabase
     private lateinit var reference: DatabaseReference
@@ -62,10 +64,10 @@ class SellHomeFragment : Fragment() {
                     }
                 }
                 if (list1.size > 0 || list2.size > 0) {
-                    var adapter = ProductAdapter(list1)
+                    var adapter = ProductAdapter(list1, this@SellHomeFragment)
                     Fe500TMTBarSellHomeRecyclerView.adapter = adapter
                     Fe500TMTBarSellHomeRecyclerView.layoutManager = GridLayoutManager(context, 2)
-                    var adapter2 = ProductAdapter(list2)
+                    var adapter2 = ProductAdapter(list2, this@SellHomeFragment)
                     Fe550TMTBarSellHomeRecyclerView.adapter = adapter2
                     Fe550TMTBarSellHomeRecyclerView.layoutManager = GridLayoutManager(context, 2)
                 }
@@ -83,6 +85,22 @@ class SellHomeFragment : Fragment() {
             fragment.onActivityResult(requestCode, resultCode, data)
         }
         super.onActivityResult(requestCode, resultCode, data)
+    }
+
+    override fun productItemClicked(position: Int, sellProductList: SellProductList) {
+        val bundle = Bundle()
+        bundle.putString("diameter", sellProductList.diameter)
+        bundle.putString("id", sellProductList.id)
+        bundle.putString("materialGrade", sellProductList.materialGrade)
+        bundle.putString("productName", sellProductList.productName)
+        bundle.putString("productPrice", sellProductList.productPrice)
+        bundle.putString("productType", sellProductList.productType)
+        bundle.putString("quantity", sellProductList.quantity)
+        bundle.putString("unitLength", sellProductList.unitLength)
+        parentFragmentManager.setFragmentResult("product", bundle)
+
+        /*Navigation.findNavController(requireView())
+            .navigate(R.id.action_homeFragment_to_productDetailsFragment)*/
     }
 
 }

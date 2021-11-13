@@ -27,18 +27,17 @@
 
         <activity
             android:name=".ui.activity.DetailedProductActivity"
-            android:exported="false" />
+            android:exported="true" />
 
         <activity
             android:name=".ui.activity.SellActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".ui.activity.HomeActivity"
             android:exported="false" />
 
         <activity
             android:name=".ui.activity.LoginActivity"
-
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
