@@ -7,7 +7,7 @@
     android:background="@color/primary_black"
     android:paddingHorizontal="15dp"
     android:paddingVertical="30dp"
-    tools:context=".ui.fragment.RegisterFragment">
+    tools:context=".ui.fragment.buy.AddDeliveryAddressFragment">
 
     <ImageView
         android:id="@+id/btnBack"
@@ -17,13 +17,21 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/btnProceed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_correct"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
     <TextView
         android:id="@+id/tvRegisterLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/nunito_bold"
         android:layout_marginTop="20dp"
-        android:text="Register"
+        android:text="Add"
         android:textColor="@color/primary_white"
         android:textSize="32sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,7 +42,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/nunito_bold"
-        android:text="to continue"
+        android:text="Delivery Address"
         android:textColor="@color/primary_white"
         android:textSize="32sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,7 +61,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/nunito_bold"
         android:hint="First Name"
-        android:padding="12dp"
+        android:padding="10dp"
         android:layout_marginRight="5dp"
         android:textColorHint="@color/p_white_800"
         android:background="@drawable/edit_text_background"
@@ -67,7 +75,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/nunito_bold"
         android:hint="Last Name"
-        android:padding="12dp"
+        android:padding="10dp"
         android:layout_marginLeft="5dp"
         android:textColorHint="@color/p_white_800"
         android:background="@drawable/edit_text_background"
@@ -81,7 +89,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/nunito_bold"
         android:hint="Mobile Number"
-        android:padding="12dp"
+        android:padding="10dp"
         android:layout_marginTop="40dp"
         android:textColorHint="@color/p_white_800"
         android:background="@drawable/edit_text_background"
@@ -89,31 +97,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/etFirstName"/>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnSendCode"
-        android:layout_width="90dp"
-        android:layout_height="30dp"
-        android:layout_marginEnd="5dp"
-        android:gravity="center"
-        android:fontFamily="@font/nunito_bold"
-        android:text="send code"
-        android:textSize="16sp"
-        android:textAllCaps="false"
-        android:textColor="@color/primary_black"
-        app:cornerRadius="10dp"
-        android:backgroundTint="@color/accent_orange"
-        app:layout_constraintEnd_toEndOf="@id/etMobile"
-        app:layout_constraintTop_toTopOf="@id/etMobile"
-        app:layout_constraintBottom_toBottomOf="@id/etMobile"
-        />
-
     <EditText
-        android:id="@+id/etVerificationCode"
+            android:id="@+id/etFlatNo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/nunito_bold"
-        android:hint="Enter Verification Code"
-        android:padding="12dp"
+        android:hint="Flat No./ House No."
+        android:padding="10dp"
         android:layout_marginTop="40dp"
         android:textColorHint="@color/p_white_800"
         android:background="@drawable/edit_text_background"
@@ -121,62 +111,112 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/etMobile"/>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnVerify"
-        android:layout_width="90dp"
-        android:layout_height="30dp"
-        android:layout_marginEnd="5dp"
-        android:fontFamily="@font/nunito_bold"
-        android:paddingHorizontal="10dp"
-        android:gravity="center"
-        android:text="verify"
-        android:textSize="16sp"
-        android:textAllCaps="false"
-        android:textColor="@color/primary_black"
-        app:cornerRadius="10dp"
-        android:backgroundTint="@color/accent_orange"
-        app:layout_constraintEnd_toEndOf="@id/etVerificationCode"
-        app:layout_constraintTop_toTopOf="@id/etVerificationCode"
-        app:layout_constraintBottom_toBottomOf="@id/etVerificationCode"
-        />
-
-
     <EditText
-        android:id="@+id/etPassword"
+        android:id="@+id/etSociety"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Set Password"
+        android:hint="Society/Street"
         android:fontFamily="@font/nunito_bold"
-        android:padding="12dp"
+        android:padding="10dp"
         android:layout_marginTop="40dp"
         android:textColorHint="@color/p_white_800"
         android:background="@drawable/edit_text_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etVerificationCode"/>
+        app:layout_constraintTop_toBottomOf="@id/etFlatNo"/>
 
+    <EditText
+        android:id="@+id/etState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="State"
+        android:fontFamily="@font/nunito_bold"
+        android:padding="10dp"
+        android:layout_marginTop="40dp"
+        android:textColorHint="@color/p_white_800"
+        android:background="@drawable/edit_text_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etFlatNo"/>
 
-    <ImageView
-        android:id="@+id/btnProceed"
+    <EditText
+        android:id="@+id/etPin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Pin"
+        android:fontFamily="@font/nunito_bold"
+        android:padding="10dp"
+        android:layout_marginTop="40dp"
+        android:textColorHint="@color/p_white_800"
+        android:background="@drawable/edit_text_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etState"/>
+    
+    <TextView
+        android:id="@+id/tvTypeOfLocation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_correct"
-        android:layout_marginTop="50dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etPassword"/>
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Type of Location"
+        android:textColor="@color/p_white_600"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etPin"
+        />
+
+    <TextView
+       android:id="@+id/tvDeliveryHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_add_address_home"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Home"
+        android:textColor="@color/p_white_600"
+        android:textSize="12dp"
+        android:scaleX="1"
+        android:scaleY="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tvDeliveryWarehouse"
+        app:layout_constraintTop_toBottomOf="@id/tvTypeOfLocation"
+        />
+
+    <TextView
+        android:id="@+id/tvDeliveryWarehouse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_add_detail_warehouse"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Warehouse"
+        android:textColor="@color/p_white_600"
+        android:textSize="12dp"
+        android:scaleX="1"
+        android:scaleY="1.2"
+        app:layout_constraintStart_toEndOf="@id/tvDeliveryHome"
+        app:layout_constraintTop_toBottomOf="@id/tvTypeOfLocation"
+        app:layout_constraintEnd_toStartOf="@id/tvDeliveryBusiness"
+        />
 
 
     <TextView
-        android:id="@+id/tvTermConditions"
+        android:id="@+id/tvDeliveryBusiness"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_business"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/nunito_bold"
-        android:textSize="11dp"
-        android:text="@string/terms_conditions"
-        android:textColor="@color/p_white_700"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        android:text="Business"
+        android:textColor="@color/p_white_600"
+        android:textSize="12dp"
+        android:scaleX="1"
+        android:scaleY="1.3"
+        app:layout_constraintStart_toEndOf="@id/tvDeliveryWarehouse"
+        app:layout_constraintTop_toBottomOf="@id/tvTypeOfLocation"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

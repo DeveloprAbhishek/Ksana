@@ -1,4 +1,4 @@
-package com.masai.ksana.ui.fragment.buy
+package com.masai.ksana.ui.buy_adapters
 
 import android.graphics.BitmapFactory
 import android.view.LayoutInflater
