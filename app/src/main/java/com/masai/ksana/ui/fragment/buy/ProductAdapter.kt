@@ -18,6 +18,7 @@ class ProductAdapter(var list: ArrayList<SellProductList>) :
     private lateinit var storageReference: StorageReference
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
         var productName = itemView.tvProductTitle
         var productPrice = itemView.tvProductPrice
 
@@ -32,11 +33,21 @@ class ProductAdapter(var list: ArrayList<SellProductList>) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+
+        //talking first word of product name
+        var name = list[position].productName
+        name = name!!.takeWhile { !it.isWhitespace() }
+
+        //setting product title in buy home layout recycler view
         var title: String =
-            "" + list[position].productName + " " + list[position].productType + " " + list[position].materialGrade
+            "" + name + " " + list[position].productType + " " + list[position].materialGrade
         holder.productName.text = title
+
+        //setting product price in buy home layout recycler view
         var price: String = "₹" + list[position].productPrice
         holder.productPrice.text = price
+
+        //setting product image in buy home layout recycler view
         storageReference =
             FirebaseStorage.getInstance().reference.child("Products/" + list[position].id + ".jpg")
         val localFile = File.createTempFile("tempImage", "jpg")
