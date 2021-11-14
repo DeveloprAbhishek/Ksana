@@ -1,14 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/secondary_gray"
     tools:context=".ui.fragment.buy.ProfileFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Profile Fragment" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvSellCartProductImage"
+        android:layout_width="70dp"
+        android:layout_height="78dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-</FrameLayout>
+        <ImageView
+            android:id="@+id/ivProductImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/cvSellCartProductImage"
+        app:layout_constraintLeft_toRightOf="@id/cvSellCartProductImage"
+        app:layout_constraintTop_toTopOf="@id/cvSellCartProductImage">
+
+        <TextView
+            android:id="@+id/tvProfileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_regular"
+            android:text="Debarpan Jana"
+            android:textColor="@color/primary_white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvProfileMobileNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/nunito_regular"
+            android:text="Material Grade"
+            android:textColor="@color/primary_white"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvProfileVerification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/nunito_regular"
+            android:text="Verified"
+            android:textColor="@color/primary_white"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvEditDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:drawableLeft="@drawable/edit_detail"
+        android:drawablePadding="5dp"
+        android:fontFamily="@font/nunito_regular"
+        android:text="Edit Detail"
+        android:textColor="@color/a_orange_100"
+        android:textSize="8sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout" />
+
+    <ImageView
+        android:id="@+id/ivProfileLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/profile_line"
+        app:layout_constraintTop_toBottomOf="@id/tvEditDetail" />
+
+    <ImageView
+        android:id="@+id/ivEditProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/edit_profile"
+        app:layout_constraintLeft_toLeftOf="@id/ivProfileLine"
+        app:layout_constraintTop_toBottomOf="@id/ivProfileLine" />
+
+    <ImageView
+        android:id="@+id/ivEditPaymentOption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/edit_payment_option"
+        app:layout_constraintLeft_toLeftOf="@id/ivProfileLine"
+        app:layout_constraintTop_toBottomOf="@id/ivEditProfile" />
+
+    <ImageView
+        android:id="@+id/ivSetting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/setting"
+        app:layout_constraintLeft_toLeftOf="@id/ivProfileLine"
+        app:layout_constraintTop_toBottomOf="@id/ivEditPaymentOption" />
+
+    <ImageView
+        android:id="@+id/ivHelpDesk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/help_desk"
+        app:layout_constraintLeft_toLeftOf="@id/ivProfileLine"
+        app:layout_constraintTop_toBottomOf="@id/ivSetting" />
+
+    <ImageView
+        android:id="@+id/ivLogOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/log_out"
+        app:layout_constraintLeft_toLeftOf="@id/ivProfileLine"
+        app:layout_constraintTop_toBottomOf="@id/ivHelpDesk" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

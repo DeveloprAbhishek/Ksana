@@ -33,6 +33,7 @@ class HomeActivity : AppCompatActivity() {
 
         android:background="@drawable/bottom_nav_bar_bg"
         */
+
         bottomNavBar.setOnNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.page_1 -> setCurrentFragment(HomeFragment())
@@ -49,4 +50,5 @@ class HomeActivity : AppCompatActivity() {
             replace(R.id.framelayout_container, fragment)
                 .commit()
         }
+
 }

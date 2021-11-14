@@ -1,5 +1,6 @@
 package com.masai.ksana.ui.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -11,6 +12,7 @@ import com.masai.ksana.ui.fragment.sell.SellProfileFragment
 import kotlinx.android.synthetic.main.activity_home.*
 
 class SellActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sell)
@@ -34,7 +36,6 @@ class SellActivity : AppCompatActivity() {
         android:background="@drawable/bottom_nav_bar_bg"
         */
 
-
         bottomNavBar.setOnNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.page_1 -> setCurrentFragment(SellHomeFragment())
@@ -51,4 +52,9 @@ class SellActivity : AppCompatActivity() {
             replace(R.id.framelayout_container, fragment)
                 .commit()
         }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+    }
+
 }

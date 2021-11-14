@@ -1,18 +1,24 @@
 package com.masai.ksana.ui.fragment.sell
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.isVisible
-import androidx.fragment.app.FragmentTransaction
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.firebase.database.*
 import com.masai.ksana.R
-import kotlinx.android.synthetic.main.activity_home.*
+import com.masai.ksana.data.SellProductList
+import com.masai.ksana.ui.activity.AddNewProductActivity
+import com.masai.ksana.ui.adapter.SellCartProductAdapter
 import kotlinx.android.synthetic.main.fragment_sell_cart.*
-import kotlinx.android.synthetic.main.fragment_sell_home.*
 
 class SellCartFragment : Fragment() {
+
+    private lateinit var database: FirebaseDatabase
+    private lateinit var reference: DatabaseReference
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -24,16 +30,61 @@ class SellCartFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         btnAddPersonFab.setOnClickListener {
-            val ft: FragmentTransaction = parentFragmentManager.beginTransaction()
+
+            val intent = Intent(context, AddNewProductActivity::class.java)
+            startActivity(intent)
+
+            /*val ft: FragmentTransaction = parentFragmentManager.beginTransaction()
             ft.replace(
                 R.id.framelayout_container,
                 AddNewProductFragment(),
                 "Add New Product Fragment"
             )
             ft.addToBackStack(null)
-            ft.commit()
+            ft.commit()*/
+
         }
+
+        //getting products from firebase database
+        database = FirebaseDatabase.getInstance()
+        reference = database.getReference("products")
+        getProducts()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        //getProducts()
+    }
+
+    private fun getProducts() {
+        reference.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                val list = ArrayList<SellProductList>()
+                for (data in snapshot.children) {
+                    var model = data.getValue(SellProductList::class.java)
+                    list.add(model as SellProductList)
+                }
+                if (list.size > 0) {
+                    var adapter = SellCartProductAdapter(list)
+                    recyclerViewSellCart.adapter = adapter
+                    recyclerViewSellCart.layoutManager = LinearLayoutManager(context)
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                Log.e("cancel", error.toString())
+            }
+        })
+    }
+
+    //passing photo file to fragment
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        for (fragment in childFragmentManager.fragments) {
+            fragment.onActivityResult(requestCode, resultCode, data)
+        }
+        super.onActivityResult(requestCode, resultCode, data)
     }
 
 }

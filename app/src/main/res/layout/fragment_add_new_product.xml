@@ -38,10 +38,31 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
+        android:id="@+id/ivUploadImage"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@id/viewWhite"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="NotSibling" />
+
+    <ImageView
+        android:id="@+id/btnOpenCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:src="@drawable/add_new_product_fragment_open_camera_button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
         android:id="@+id/btnUpload"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="180dp"
         android:src="@drawable/add_new_product_fragment_upload_button"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -55,6 +76,7 @@
         app:cardCornerRadius="36dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/viewWhite"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/primary_white"
@@ -64,7 +86,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/radBtnEnterProductName"
+                android:id="@+id/cvEnterProductName"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginLeft="20dp"
@@ -84,21 +106,22 @@
                     android:fontFamily="@font/nunito_regular"
                     android:hint="Enter Product Name"
                     android:padding="10dp"
+                    android:textColor="@color/p_white_500"
                     android:textColorHint="@color/p_white_800"
                     android:textSize="14sp" />
             </androidx.cardview.widget.CardView>
 
             <RadioGroup
-                android:id="@+id/groupradio"
+                android:id="@+id/groupRadio"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/radBtnEnterProductName">
+                app:layout_constraintTop_toBottomOf="@id/cvEnterProductName">
 
                 <RadioButton
-                    android:id="@+id/radia_id1"
+                    android:id="@+id/btnTMTBar"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:buttonTint="@color/accent_orange"
@@ -108,7 +131,7 @@
                     android:textSize="14sp" />
 
                 <RadioButton
-                    android:id="@+id/radia_id2"
+                    android:id="@+id/btnFlatIronBar"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:buttonTint="@color/accent_orange"
@@ -124,7 +147,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginLeft="215dp"
-                android:layout_marginTop="125dp"
+                android:layout_marginTop="115dp"
                 android:layout_marginRight="20dp"
                 android:background="@color/s_gray_500"
                 app:cardCornerRadius="12dp"
@@ -140,6 +163,7 @@
                     android:fontFamily="@font/nunito_regular"
                     android:hint="Enter Material Grade"
                     android:padding="10dp"
+                    android:textColor="@color/p_white_500"
                     android:textColorHint="@color/p_white_800"
                     android:textSize="14sp" />
             </androidx.cardview.widget.CardView>
@@ -186,6 +210,7 @@
                     android:fontFamily="@font/nunito_regular"
                     android:hint="Enter Value"
                     android:padding="10dp"
+                    android:textColor="@color/p_white_500"
                     android:textColorHint="@color/p_white_800"
                     android:textSize="14sp" />
             </androidx.cardview.widget.CardView>
@@ -230,6 +255,7 @@
                     android:fontFamily="@font/nunito_regular"
                     android:hint="Enter Value"
                     android:padding="10dp"
+                    android:textColor="@color/p_white_500"
                     android:textColorHint="@color/p_white_800"
                     android:textSize="14sp" />
             </androidx.cardview.widget.CardView>
@@ -239,7 +265,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="325dp"
+                android:layout_marginTop="320dp"
                 android:fontFamily="@font/nunito_regular"
                 android:text="Enter Quantity to Sold"
                 android:textColor="@color/p_white_900"
@@ -252,21 +278,49 @@
                 android:id="@+id/etEnterQuantity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="-10dp"
                 android:layout_marginRight="20dp"
                 android:fontFamily="@font/nunito_regular"
-                android:hint="Min 50"
-                android:padding="10dp"
+                android:hint="Min 50 Ton"
+                android:textColor="@color/s_gray_800"
                 android:textColorHint="@color/p_white_800"
                 android:textSize="14sp"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="@id/tvEnterQuantityToSold" />
+
+            <TextView
+                android:id="@+id/tvEnterProductPriceToSold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/nunito_regular"
+                android:text="Enter Product Price to Sold"
+                android:textColor="@color/p_white_900"
+                android:textColorHint="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvEnterQuantityToSold" />
+
+            <EditText
+                android:id="@+id/etEnterProductPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-10dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/nunito_regular"
+                android:hint="Min 10000"
+                android:textColor="@color/s_gray_800"
+                android:textSize="14sp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvEnterProductPriceToSold" />
 
             <ImageView
                 android:id="@+id/btnProceed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="150dp"
-                android:layout_marginBottom="110dp"
+                android:layout_marginBottom="50dp"
                 android:src="@drawable/add_new_product_fragment_proceed_button"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
@@ -274,6 +328,5 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
