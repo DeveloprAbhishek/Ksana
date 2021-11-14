@@ -6,9 +6,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.FragmentResultListener
 import com.masai.ksana.R
 import com.masai.ksana.ui.activity.SellActivity
 import kotlinx.android.synthetic.main.fragment_product_successfully_added.*
+import kotlinx.android.synthetic.main.fragment_product_successfully_added.ivHome
+import kotlinx.android.synthetic.main.fragment_sell_select_credit.*
 
 class ProductSuccessfullyAddedFragment : Fragment() {
 
@@ -22,6 +25,27 @@ class ProductSuccessfullyAddedFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        parentFragmentManager.setFragmentResultListener(
+            "sellProduct3",
+            this,
+            FragmentResultListener() { s: String, bundle: Bundle ->
+
+                var productTitle =
+                    "" + bundle.getString("productName") + " " + bundle.getString("productType") + ""
+
+                tvProductTitle.text = productTitle
+                tvUnitLength.text = bundle.getString("unitLength") + "m"
+                tvDiameter.text = bundle.getString("diameter") + "mm"
+                tvQuantity.text = bundle.getString("quantity") + " TON"
+                tvFacilityAddress.text = bundle.getString("address")
+                tvCreditMethod.text = bundle.getString("creditType")
+
+                tvDeliveryToFacility.text = bundle.getString("deliveryDate")
+
+                tvProductPrice.text = "₹" + bundle.getString("productPrice")
+                //tvTransactionID.text = bundle.getString("id")
+            })
 
         btnDone.setOnClickListener {
             activity?.let {

@@ -48,6 +48,11 @@ class SellHomeFragment : Fragment(), ProductClicked {
         getProducts()
     }
 
+    override fun onResume() {
+        super.onResume()
+        //getProducts()
+    }
+
     private fun getProducts() {
         reference.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {

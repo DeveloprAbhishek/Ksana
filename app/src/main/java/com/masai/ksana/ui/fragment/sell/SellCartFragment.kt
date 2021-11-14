@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.database.*
 import com.masai.ksana.R
@@ -32,8 +33,18 @@ class SellCartFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         btnAddPersonFab.setOnClickListener {
+
             val intent = Intent(context, AddNewProductActivity::class.java)
             startActivity(intent)
+
+            /*val ft: FragmentTransaction = parentFragmentManager.beginTransaction()
+            ft.replace(
+                R.id.framelayout_container,
+                AddNewProductFragment(),
+                "Add New Product Fragment"
+            )
+            ft.addToBackStack(null)
+            ft.commit()*/
 
         }
 
@@ -41,6 +52,11 @@ class SellCartFragment : Fragment() {
         database = FirebaseDatabase.getInstance()
         reference = database.getReference("products")
         getProducts()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        //getProducts()
     }
 
     private fun getProducts() {

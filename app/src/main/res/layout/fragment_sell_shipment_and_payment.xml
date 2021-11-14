@@ -38,6 +38,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/tvShipment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -182,38 +183,6 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="80dp"
             android:hint="DD/MM" />
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:id="@+id/llSetProductPrice"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/llSetShipmentDeliveryDate">
-
-        <TextView
-            android:id="@+id/tvSetProductPrice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/nunito_regular"
-            android:padding="10dp"
-            android:text="Set Product Price"
-            android:textColorHint="@color/p_white_900"
-            android:textSize="16sp" />
-
-        <EditText
-            android:id="@+id/etSetProductPrice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="130dp"
-            android:hint="XXXXXXX" />
 
     </LinearLayout>
 

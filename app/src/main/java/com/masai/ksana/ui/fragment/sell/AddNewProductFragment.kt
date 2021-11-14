@@ -25,6 +25,7 @@ import java.io.File
 import androidx.core.net.toUri
 import androidx.fragment.app.FragmentTransaction
 import com.masai.ksana.data.SellProductList
+import kotlinx.android.synthetic.main.fragment_add_new_product.btnProceed
 
 class AddNewProductFragment : Fragment() {
 
@@ -37,6 +38,15 @@ class AddNewProductFragment : Fragment() {
     var radioGroup: RadioGroup? = null
     lateinit var radioButton: RadioButton
 
+    var productName = ""
+    var productPrice = ""
+    var productType = ""
+    var materialGrade = ""
+    var unitLength = ""
+    var diameter = ""
+    var quantity = ""
+    var productId = ""
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -48,9 +58,31 @@ class AddNewProductFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
         //save product data
         btnProceed.setOnClickListener {
+
+
             //saveProduct()
+
+
+            val bundle = Bundle()
+            bundle.putString("diameter", etEnterDiameter.text.toString())
+            bundle.putString("id", productId)
+            bundle.putString("materialGrade", etEnterMaterialGrade.text.toString())
+            bundle.putString("productName", etEnterProductName.text.toString())
+            bundle.putString("productPrice", etEnterProductPrice.text.toString())
+            //product type radio button
+            radioGroup = view.findViewById(R.id.groupRadio)
+            val intSelectButton: Int = radioGroup!!.checkedRadioButtonId
+            radioButton = view.findViewById(intSelectButton)!!
+            productType = radioButton.text.toString()
+            bundle.putString("productType", productType)
+            bundle.putString("quantity", etEnterQuantity.text.toString())
+            bundle.putString("unitLength", etEnterUnitLength.text.toString())
+
+            parentFragmentManager.setFragmentResult("sellProduct1", bundle)
+
             val ft: FragmentTransaction = parentFragmentManager.beginTransaction()
             ft.replace(
                 R.id.framelayout_container,
@@ -59,6 +91,7 @@ class AddNewProductFragment : Fragment() {
             )
             ft.addToBackStack(null)
             ft.commit()
+
         }
 
         //upload from gallery
@@ -123,40 +156,39 @@ class AddNewProductFragment : Fragment() {
 
     //save product data to data class
     private fun saveProduct() {
-        val productName = etEnterProductName.text.toString().trim()
+        productName = etEnterProductName.text.toString().trim()
         if (productName.isEmpty()) {
             etEnterProductName.error = "Please Enter Product Name"
             return
         }
-        val productPrice = etEnterProductPrice.text.toString().trim()
+        productPrice = etEnterProductPrice.text.toString().trim()
         if (productPrice.isEmpty()) {
             etEnterProductPrice.error = "Please Enter Product Price"
             return
         }
 
         //product type radio button
-        var productType: String = ""
         radioGroup = view?.findViewById(R.id.groupRadio)
         val intSelectButton: Int = radioGroup!!.checkedRadioButtonId
         radioButton = view?.findViewById(intSelectButton)!!
         productType = radioButton.text.toString()
 
-        val materialGrade = etEnterMaterialGrade.text.toString().trim()
+        materialGrade = etEnterMaterialGrade.text.toString().trim()
         if (materialGrade.isEmpty()) {
             etEnterMaterialGrade.error = "Please Enter Material Grade"
             return
         }
-        val unitLength = etEnterUnitLength.text.toString().trim()
+        unitLength = etEnterUnitLength.text.toString().trim()
         if (unitLength.isEmpty()) {
             etEnterUnitLength.error = "Please Enter Unit Length"
             return
         }
-        val diameter = etEnterDiameter.text.toString().trim()
+        diameter = etEnterDiameter.text.toString().trim()
         if (diameter.isEmpty()) {
             etEnterDiameter.error = "Please Enter Diameter"
             return
         }
-        val quantity = etEnterQuantity.text.toString().trim()
+        quantity = etEnterQuantity.text.toString().trim()
         if (quantity.isEmpty()) {
             etEnterQuantity.error = "Please Enter Quantity"
             return
@@ -165,7 +197,7 @@ class AddNewProductFragment : Fragment() {
         //upload product data to realtime database
         database = FirebaseDatabase.getInstance()
         reference = database.getReference("products")
-        val productId = reference.push().key
+        productId = reference.push().key!!
 
         val product =
             productId?.let {
@@ -198,6 +230,42 @@ class AddNewProductFragment : Fragment() {
         storageReference = FirebaseStorage.getInstance().getReference("Products/" + id + ".jpg")
         storageReference.putFile(imageUri).addOnSuccessListener {
             Toast.makeText(context, "Image Added Successfully", Toast.LENGTH_SHORT).show()
+
+            val bundle = Bundle()/*
+            bundle.putString("diameter", etEnterDiameter.text.toString())
+            bundle.putString("id", productId)
+            bundle.putString("materialGrade", etEnterMaterialGrade.text.toString())
+            bundle.putString("productName", etEnterProductName.text.toString())
+            bundle.putString("productPrice", etEnterProductPrice.text.toString())
+            //product type radio button
+            radioGroup = view?.findViewById(R.id.groupRadio)
+            val intSelectButton: Int = radioGroup!!.checkedRadioButtonId
+            radioButton = view?.findViewById(intSelectButton)!!
+            productType = radioButton.text.toString()
+            bundle.putString("productType", productType)
+            bundle.putString("quantity", etEnterQuantity.text.toString())
+            bundle.putString("unitLength", etEnterUnitLength.text.toString())*/
+            bundle.putString("diameter", diameter)
+            bundle.putString("id", productId)
+            bundle.putString("materialGrade", materialGrade)
+            bundle.putString("productName", productName)
+            bundle.putString("productPrice", productPrice)
+            productType = radioButton.text.toString()
+            bundle.putString("productType", productType)
+            bundle.putString("quantity", quantity)
+            bundle.putString("unitLength", unitLength)
+            parentFragmentManager.setFragmentResult("sellProduct1", bundle)
+
+            val ft: FragmentTransaction = parentFragmentManager.beginTransaction()
+            ft.replace(
+                R.id.framelayout_container,
+                SellShipmentAndPaymentFragment(),
+                "Sell Shipment And Payment Fragment"
+            )
+            ft.addToBackStack(null)
+            ft.commit()
+
+
         }.addOnFailureListener {
             Toast.makeText(context, "Failed to upload Product", Toast.LENGTH_SHORT).show()
         }
