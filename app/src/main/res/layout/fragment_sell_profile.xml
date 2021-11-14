@@ -132,7 +132,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:src="@drawable/edit_profile"
+        android:src="@drawable/log_out"
         app:layout_constraintLeft_toLeftOf="@id/ivProfileLine"
         app:layout_constraintTop_toBottomOf="@id/ivHelpDesk" />
 
