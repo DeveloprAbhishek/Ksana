@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.fragment.sell.ProductSuccessfullyAddedFragment">
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/cart_back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivBuyNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/cart_notification"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/cart_home"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvProductSuccessfullyAdded"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Product\nSuccessfully Added"
+        android:textColor="@color/primary_black"
+        android:textColorHint="@color/white"
+        android:textSize="38sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvProductDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Product Details"
+        android:textColor="@color/p_white_900"
+        android:textColorHint="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvProductSuccessfullyAdded" />
+
+    <TextView
+        android:id="@+id/tvProductTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Product Title"
+        android:textColor="@color/primary_black"
+        android:textColorHint="@color/white"
+        android:textSize="28sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvProductDetails" />
+
+    <TextView
+        android:id="@+id/tvUnitLengthTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Unit Length"
+        android:textColor="#484848"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvProductTitle" />
+
+    <TextView
+        android:id="@+id/tvUnitLength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="6m"
+        android:textColor="#626262"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="@id/tvUnitLengthTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvUnitLengthTitle" />
+
+    <TextView
+        android:id="@+id/tvDiameterTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Diameter"
+        android:textColor="#484848"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toRightOf="@id/tvUnitLengthTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvProductTitle" />
+
+    <TextView
+        android:id="@+id/tvDiameter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="8mm"
+        android:textColor="#626262"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="@id/tvDiameterTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvDiameterTitle" />
+
+    <TextView
+        android:id="@+id/tvQuantityTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Quantity"
+        android:textColor="#484848"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toRightOf="@id/tvDiameterTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvProductTitle" />
+
+    <TextView
+        android:id="@+id/tvQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="200 TON"
+        android:textColor="#626262"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="@id/tvQuantityTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvQuantityTitle" />
+
+    <TextView
+        android:id="@+id/tvFacilityAddressTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Facility Address"
+        android:textColor="#484848"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvUnitLength" />
+
+    <TextView
+        android:id="@+id/tvFacilityAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="BLUEMOON ENTERPRISE, P.S, VILL- DEBHOG, POST - DEBHOG, DIST, Bhabanipur, Haldia, West Bengal 721657"
+        android:textColor="@color/p_white_900"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/tvFacilityAddressTitle" />
+
+    <TextView
+        android:id="@+id/tvCreditMethodTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Credit Method"
+        android:textColor="#484848"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvFacilityAddress" />
+
+    <TextView
+        android:id="@+id/tvCreditMethod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Bank Account Payment"
+        android:textColor="@color/p_white_900"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/tvCreditMethodTitle" />
+
+    <TextView
+        android:id="@+id/tvDeliveryToFacilityTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Delivery to Facility"
+        android:textColor="#484848"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toRightOf="@id/tvCreditMethodTitle"
+        app:layout_constraintTop_toTopOf="@id/tvCreditMethodTitle" />
+
+    <TextView
+        android:id="@+id/tvDeliveryToFacility"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="20th NOV 2021"
+        android:textColor="@color/p_white_900"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="@id/tvDeliveryToFacilityTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvDeliveryToFacilityTitle" />
+
+    <TextView
+        android:id="@+id/tvProductPriceTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Product Price"
+        android:textColor="#484848"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCreditMethod" />
+
+    <TextView
+        android:id="@+id/tvProductPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="₹25,286"
+        android:textColor="@color/p_white_900"
+        android:textSize="16sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvProductPriceTitle" />
+
+    <TextView
+        android:id="@+id/tvTransactionIDTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Transaction ID :"
+        android:textColor="#484848"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvProductPriceTitle" />
+
+    <TextView
+        android:id="@+id/tvTransactionID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="BGFRT256899451"
+        android:textColor="@color/a_orange_500"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toRightOf="@id/tvTransactionIDTitle"
+        app:layout_constraintTop_toTopOf="@id/tvTransactionIDTitle" />
+
+    <ImageView
+        android:id="@+id/btnDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:src="@drawable/add_new_product_fragment_done_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

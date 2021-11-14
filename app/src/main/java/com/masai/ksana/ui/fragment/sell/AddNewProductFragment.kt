@@ -23,6 +23,7 @@ import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import java.io.File
 import androidx.core.net.toUri
+import androidx.fragment.app.FragmentTransaction
 import com.masai.ksana.data.SellProductList
 
 class AddNewProductFragment : Fragment() {
@@ -49,7 +50,15 @@ class AddNewProductFragment : Fragment() {
 
         //save product data
         btnProceed.setOnClickListener {
-            saveProduct()
+            //saveProduct()
+            val ft: FragmentTransaction = parentFragmentManager.beginTransaction()
+            ft.replace(
+                R.id.framelayout_container,
+                SellShipmentAndPaymentFragment(),
+                "Sell Shipment And Payment Fragment"
+            )
+            ft.addToBackStack(null)
+            ft.commit()
         }
 
         //upload from gallery
