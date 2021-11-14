@@ -86,6 +86,7 @@
         app:layout_constraintTop_toTopOf="@id/ivPersonSellBuy" />
 
     <Button
+        android:id="@+id/btn_Sell"
         android:layout_width="wrap_content"
         android:layout_height="55dp"
         android:background="@drawable/button_bg_sell"
@@ -110,6 +111,7 @@
         app:layout_constraintTop_toTopOf="@id/guidelineAt80" />
 
     <Button
+        android:id="@+id/btn_Buy"
         android:layout_width="wrap_content"
         android:layout_height="55dp"
         android:background="@drawable/button_bg_buy"
