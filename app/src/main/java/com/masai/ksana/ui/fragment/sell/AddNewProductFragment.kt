@@ -218,7 +218,7 @@ class AddNewProductFragment : Fragment() {
                     Toast.makeText(context, "Failed to upload Product", Toast.LENGTH_SHORT)
                         .show()
                 }
-                Toast.makeText(context, "Product Added Successfully", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(context, "Product Added Successfully", Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -227,7 +227,7 @@ class AddNewProductFragment : Fragment() {
     private fun uploadProductImage(id: String) {
         storageReference = FirebaseStorage.getInstance().getReference("Products/" + id + ".jpg")
         storageReference.putFile(imageUri).addOnSuccessListener {
-            Toast.makeText(context, "Image Added Successfully", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "Product Added Successfully", Toast.LENGTH_SHORT).show()
 
             val bundle = Bundle()/*
             bundle.putString("diameter", etEnterDiameter.text.toString())
