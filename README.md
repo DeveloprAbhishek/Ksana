@@ -1,5 +1,5 @@
 # Ksana
-With Sarang, you can listen to millions of songs and podcasts for free! Listen to artists you love and enjoy music and playlists in Hindi, English, Tamil, Telugu, and many more languages.
+With Ksana, you can buy or sell any TMT Bar or Flat Bar Products, it is a B2B application.
 
 
 # Links 
@@ -11,7 +11,6 @@ With Sarang, you can listen to millions of songs and podcasts for free! Listen t
 * [Glide](https://github.com/bumptech/glide)
 * [Retrofit](https://square.github.io/retrofit/)
 * [Firebase](https://firebase.google.com/docs/auth)
-* [AutoImageSlider](https://github.com/smarteist/Android-Image-Slider)
 * [Jetpack](https://developer.android.com/jetpack)
 * [NotificationBadge](https://github.com/nex3z/NotificationBadge)
 * [GooglePay](https://developers.google.com/pay/api/android/guides/tutorial)
@@ -56,7 +55,7 @@ With Sarang, you can listen to millions of songs and podcasts for free! Listen t
 
 * Use the git clone command along with the copied URL from earlier. $ git clone https://github.com/Kingbond470/Sarang.git
 
-* Press Enter. $ git clone https://github.com/Kingbond470/Sarang.git Cloning into Git … remote: Counting objects: 13, done. remote: Compressing objects: 100% (13/13), done. remove: Total 13 (delta 1), reused 0 (delta 1) Unpacking objects: 100% (13/13), done.
+* Press Enter. $ git clone https://github.com/DeveloprAbhishek/Ksana.git Cloning into Git … remote: Counting objects: 13, done. remote: Compressing objects: 100% (13/13), done. remove: Total 13 (delta 1), reused 0 (delta 1) Unpacking objects: 100% (13/13), done.
 
 Congratulations, you have created your first local clone from your remote Github repository.
 
@@ -82,7 +81,7 @@ Open Android Studio. Go to File > New > Project From Version Control. Copy the l
 
 <table>
   <tr>
-    <td>Search Song</td>
+    <td>Cart</td>
   </tr>
   <tr>
     <td><img src="" width="280"/></td>
@@ -93,9 +92,8 @@ Open Android Studio. Go to File > New > Project From Version Control. Copy the l
  
  <table>
   <tr>
-    <td>Library</td>
-    <td>Premium</td>
-   <td>Payment</td>
+    <td>Profile</td>
+    <td>Menu</td>
   </tr>
   <tr>
     <td><img src="" width="280"/></td>
@@ -104,21 +102,6 @@ Open Android Studio. Go to File > New > Project From Version Control. Copy the l
   </tr>
  </table>
  
-### Top Navigation
-
- <table>
-  <tr>
-    <td>Settings</td>
-      <td>Recently Played</td>
-      <td>Notification</td>
-  </tr>
-  <tr>
-    <td><img src="" width="280"/></td>
-       <td><img src="" width="280"/></td>
-      <td><img src="" width="280"/></td>
-  </tr>
- </table>
-
 # Dependencies 
 
     //General Dependencies
@@ -198,7 +181,7 @@ Open Android Studio. Go to File > New > Project From Version Control. Copy the l
 ## [Contributors](#Contributors)
 
 - [Murali Krishna](https://github.com/MuraliKrishnaSundara)
-- [Abhishek Singh](https://github.com/DeveloprAbhishek)
+- [Abhishek](https://github.com/DeveloprAbhishek)
 
     
 # Lessons Learnt📚
