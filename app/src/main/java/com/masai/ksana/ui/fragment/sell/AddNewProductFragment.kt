@@ -58,14 +58,12 @@ class AddNewProductFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
         //save product data
         btnProceed.setOnClickListener {
 
-
             saveProduct()
 
-
+/*
             val bundle = Bundle()
             bundle.putString("diameter", etEnterDiameter.text.toString())
             bundle.putString("id", productId)
@@ -91,7 +89,7 @@ class AddNewProductFragment : Fragment() {
             )
             ft.addToBackStack(null)
             ft.commit()
-
+*/
         }
 
         //upload from gallery

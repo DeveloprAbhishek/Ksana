@@ -113,7 +113,7 @@ class SelectPaymentFragment : Fragment(R.layout.fragment_select_payment) {
             }
         if (orderId != null) {
             reference.child(orderId).setValue(product).addOnCompleteListener {
-                Toast.makeText(context, "Order Placed Successfully", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(context, "Order Placed Successfully", Toast.LENGTH_SHORT).show()
             }
         }
     }
