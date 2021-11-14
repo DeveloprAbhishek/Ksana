@@ -1,5 +1,6 @@
 package com.masai.ksana.ui.fragment.buy
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,9 +8,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.FragmentTransaction
+import com.bumptech.glide.Glide
+import com.google.firebase.auth.FirebaseAuth
 import com.masai.ksana.R
+import com.masai.ksana.ui.activity.LoginActivity
 import com.masai.ksana.ui.activity.SellActivity
 import kotlinx.android.synthetic.main.fragment_menu.*
+import kotlinx.android.synthetic.main.fragment_menu.ivLogOut
+import kotlinx.android.synthetic.main.fragment_menu.ivProductImage
+import kotlinx.android.synthetic.main.fragment_menu.tvProfileMobileNumber
+import kotlinx.android.synthetic.main.fragment_menu.tvProfileName
+
+//profile
+private lateinit var mAuth: FirebaseAuth
 
 class MenuFragment : Fragment() {
 
@@ -46,6 +57,21 @@ class MenuFragment : Fragment() {
 
         }
 
+        //profile
+        mAuth = FirebaseAuth.getInstance()
+        val user = mAuth.currentUser
+        if (user != null) {
+            Glide.with(ivProductImage).load(user.photoUrl).into(ivProductImage)
+            tvProfileName.text = user.displayName
+            tvProfileMobileNumber.text = user.phoneNumber
+        }
+
+        ivLogOut.setOnClickListener {
+            mAuth.signOut()
+            val logout = Intent(activity, LoginActivity::class.java)
+            startActivity(logout)
+            (activity as Activity?)?.overridePendingTransition(0, 0)
+        }
     }
 
 }

@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -69,9 +70,11 @@ class LoginActivity : AppCompatActivity() {
                     firebaseAuthWithGoogle(account.idToken!!)
                 } catch (e: ApiException) {
                     // Google Sign In failed, update UI appropriately
+                    Toast.makeText(this, "Google Sign In was Failed", Toast.LENGTH_SHORT).show()
                     Log.w(TAG, "Google sign in failed", e)
                 }
             } else {
+                Toast.makeText(this, "Google Sign In was Failed", Toast.LENGTH_SHORT).show()
                 Log.w("SignUpActivity", exception.toString())
             }
         }
@@ -83,12 +86,14 @@ class LoginActivity : AppCompatActivity() {
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
+                    Toast.makeText(this, "Google Sign In was Successful", Toast.LENGTH_SHORT).show()
                     Log.d(TAG, "signInWithCredential:success")
                     val user = mAuth.currentUser
                     setCurrentFragment(BuySellFragment())
                 } else {
                     // If sign in fails, display a message to the user.
                     Log.w(TAG, "signInWithCredential:failure", task.exception)
+                    Toast.makeText(this, "Google Sign In was Failed", Toast.LENGTH_SHORT).show()
 
                 }
             }
