@@ -38,7 +38,7 @@ class ProductDetailFragment : Fragment(R.layout.fragment_product_detail) {
         ivProductDetailBuy.setOnClickListener {
 
             if (args != null) {
-                parentFragmentManager.setFragmentResult("product", args)
+                parentFragmentManager.setFragmentResult("product1", args)
             }
             val ft: FragmentTransaction = parentFragmentManager.beginTransaction()
             ft.replace(

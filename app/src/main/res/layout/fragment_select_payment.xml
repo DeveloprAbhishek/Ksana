@@ -153,7 +153,6 @@
         app:layout_constraintStart_toEndOf="@id/ivAxisLogo"
         app:layout_constraintTop_toBottomOf="@+id/tvBankTransferLabel" />
 
-
     <ImageView
         android:id="@+id/ivUnitedLogo"
         android:layout_width="wrap_content"
@@ -192,5 +191,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvUpiLabel" />
+
+
+    <ImageView
+        android:id="@+id/ivProceed"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/add_new_product_fragment_proceed_button"
+        app:layout_constraintBottom_toBottomOf="@id/etProceed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="@id/etProceed"
+        app:layout_constraintTop_toTopOf="@id/etProceed" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

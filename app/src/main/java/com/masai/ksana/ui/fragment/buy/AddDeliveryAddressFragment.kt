@@ -23,7 +23,7 @@ class AddDeliveryAddressFragment : Fragment(R.layout.fragment_add_delivery_addre
         var unitLength: String = ""
 
         parentFragmentManager.setFragmentResultListener(
-            "product",
+            "product1",
             this,
             FragmentResultListener() { s: String, bundle: Bundle ->
                 diameter = bundle.getString("diameter").toString()
