@@ -33,7 +33,7 @@ class HomeFragment : Fragment(), ProductClicked {
         super.onViewCreated(view, savedInstanceState)
 
         database = FirebaseDatabase.getInstance()
-        reference = database.getReference("products")
+        reference = database.getReference("newProducts")
         getProducts()
     }
 

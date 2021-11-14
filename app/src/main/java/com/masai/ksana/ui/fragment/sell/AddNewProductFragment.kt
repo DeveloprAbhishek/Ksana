@@ -63,7 +63,7 @@ class AddNewProductFragment : Fragment() {
         btnProceed.setOnClickListener {
 
 
-            //saveProduct()
+            saveProduct()
 
 
             val bundle = Bundle()
@@ -196,7 +196,7 @@ class AddNewProductFragment : Fragment() {
 
         //upload product data to realtime database
         database = FirebaseDatabase.getInstance()
-        reference = database.getReference("products")
+        reference = database.getReference("newProducts")
         productId = reference.push().key!!
 
         val product =
