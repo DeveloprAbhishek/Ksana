@@ -1,6 +1,7 @@
 package com.masai.ksana.ui.fragment.buy
 
 import android.graphics.BitmapFactory
+import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
@@ -17,6 +18,48 @@ class ProductDetailFragment : Fragment(R.layout.fragment_product_detail) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        btnUnit6m.setOnClickListener {
+            btnUnit6m.setBackgroundColor(Color.DKGRAY)
+        }
+        btnUnit9m.setOnClickListener {
+            btnUnit9m.setBackgroundColor(Color.DKGRAY)
+        }
+        btnUnit12m.setOnClickListener {
+            btnUnit12m.setBackgroundColor(Color.DKGRAY)
+        }
+
+
+        btnDiameter6mm.setOnClickListener {
+            btnDiameter6mm.setBackgroundColor(Color.DKGRAY)
+        }
+        btnDiameter8mm.setOnClickListener {
+            btnDiameter8mm.setBackgroundColor(Color.DKGRAY)
+        }
+        btnDiameter10mm.setOnClickListener {
+            btnDiameter10mm.setBackgroundColor(Color.DKGRAY)
+        }
+        btnDiameter12mm.setOnClickListener {
+            btnDiameter12mm.setBackgroundColor(Color.DKGRAY)
+        }
+        btnDiameter16mm.setOnClickListener {
+            btnDiameter16mm.setBackgroundColor(Color.DKGRAY)
+        }
+        btnDiameter20mm.setOnClickListener {
+            btnDiameter20mm.setBackgroundColor(Color.DKGRAY)
+        }
+        btnDiameter25mm.setOnClickListener {
+            btnDiameter25mm.setBackgroundColor(Color.DKGRAY)
+        }
+        btnDiameter28mm.setOnClickListener {
+            btnDiameter28mm.setBackgroundColor(Color.DKGRAY)
+        }
+        btnDiameter30mm.setOnClickListener {
+            btnDiameter30mm.setBackgroundColor(Color.DKGRAY)
+        }
+        btnDiameter32mm.setOnClickListener {
+            btnDiameter32mm.setBackgroundColor(Color.DKGRAY)
+        }
 
         //setting product details
         var args = arguments
