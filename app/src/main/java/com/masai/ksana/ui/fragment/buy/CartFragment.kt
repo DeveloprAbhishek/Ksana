@@ -32,7 +32,6 @@ class CartFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         ivHome.setOnClickListener {
-
             activity?.let {
                 val intent = Intent(it, HomeActivity::class.java)
                 it.startActivity(intent)

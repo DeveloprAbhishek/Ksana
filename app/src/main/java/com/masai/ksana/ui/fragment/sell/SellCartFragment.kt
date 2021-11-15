@@ -12,6 +12,7 @@ import com.google.firebase.database.*
 import com.masai.ksana.R
 import com.masai.ksana.data.SellProductList
 import com.masai.ksana.ui.activity.AddNewProductActivity
+import com.masai.ksana.ui.activity.HomeActivity
 import com.masai.ksana.ui.adapter.SellCartProductAdapter
 import kotlinx.android.synthetic.main.fragment_sell_cart.*
 
@@ -36,6 +37,12 @@ class SellCartFragment : Fragment() {
             val intent = Intent(context, AddNewProductActivity::class.java)
             startActivity(intent)
 
+            ivHome.setOnClickListener {
+                activity?.let {
+                    val intent = Intent(it, HomeActivity::class.java)
+                    it.startActivity(intent)
+                }
+            }
             /*val ft: FragmentTransaction = parentFragmentManager.beginTransaction()
             ft.replace(
                 R.id.framelayout_container,

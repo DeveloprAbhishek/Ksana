@@ -54,7 +54,14 @@ class MenuFragment : Fragment() {
         }
 
         ivCart.setOnClickListener {
-
+            val ft: FragmentTransaction = parentFragmentManager.beginTransaction()
+            ft.replace(
+                R.id.framelayout_container,
+                CartFragment(),
+                "Cart Fragment"
+            )
+            ft.addToBackStack(null)
+            ft.commit()
         }
 
         //profile
