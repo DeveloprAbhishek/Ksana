@@ -53,7 +53,7 @@ With Ksana, you can buy or sell any TMT Bar or Flat Bar Products, it is a B2B ap
 
 * Click on “Clone or download” and copy the URL.
 
-* Use the git clone command along with the copied URL from earlier. $ git clone https://github.com/Kingbond470/Sarang.git
+* Use the git clone command along with the copied URL from earlier. $ git clone https://github.com/DeveloprAbhishek/Ksana.git
 
 * Press Enter. $ git clone https://github.com/DeveloprAbhishek/Ksana.git Cloning into Git … remote: Counting objects: 13, done. remote: Compressing objects: 100% (13/13), done. remove: Total 13 (delta 1), reused 0 (delta 1) Unpacking objects: 100% (13/13), done.
 
